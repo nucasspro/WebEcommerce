@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WebEcommerce.Data.EF.Extensions;
-using WebEcommerce.Model.Entities;
+using WebEcommerce.Data.Entities;
 
 namespace WebEcommerce.Data.EF.EntityConfigurations
 {

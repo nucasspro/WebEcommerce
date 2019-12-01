@@ -1,12 +1,11 @@
-using System;
 using System.Collections.Generic;
 using WebEcommerce.Infrastructure.Shared;
 using WebEcommerce.Model.Enums;
 using WebEcommerce.Model.Interfaces;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
-    public class Bill: DomainEntity<int>, IDateTracking
+    public class Bill : DomainEntity<int>, IDateTracking
     {
         public Bill()
         {
@@ -50,8 +49,8 @@ namespace WebEcommerce.Model.Entities
         public string DateModified { set; get; }
         public Status Status { set; get; } = Status.Active;
 
-        public int CustomerId { set; get; }
-        public virtual AppUser User { set; get; }
+        public int? CustomerId { set; get; }
+        public virtual User User { set; get; }
 
         public virtual ICollection<BillDetail> BillDetails { set; get; }
     }

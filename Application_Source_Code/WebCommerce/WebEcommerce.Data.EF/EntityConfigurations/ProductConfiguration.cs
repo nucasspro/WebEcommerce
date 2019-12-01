@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WebEcommerce.Data.EF.Extensions;
-using WebEcommerce.Model.Entities;
+using WebEcommerce.Data.Entities;
 
 namespace WebEcommerce.Data.EF.EntityConfigurations
 {
@@ -30,11 +30,6 @@ namespace WebEcommerce.Data.EF.EntityConfigurations
             entity.Property(x => x.Tags).IsRequired(false).HasColumnName("Tags").HasColumnType("nvarchar(255)");
             entity.Property(x => x.Unit).IsRequired(false).HasColumnName("Unit").HasColumnType("nvarchar(255)");
 
-            entity.Property(x => x.SeoPageTitle).IsRequired(false).HasColumnName("SeoPageTitle").HasColumnType("nvarchar(255)");
-            entity.Property(x => x.SeoAlias).IsRequired(false).HasColumnName("SeoAlias").HasColumnType("nvarchar(255)");
-            entity.Property(x => x.SeoKeywords).IsRequired(false).HasColumnName("SeoKeywords").HasColumnType("nvarchar(255)");
-            entity.Property(x => x.SeoDescription).IsRequired(false).HasColumnName("SeoDescription").HasColumnType("nvarchar(255)");
-            entity.Property(x => x.Status).IsRequired(true).HasColumnName("Status").HasColumnType("int");
             entity.Property(x => x.DateCreated).IsRequired(true).HasColumnName("DateCreated").HasColumnType("varchar(255)");
             entity.Property(x => x.DateModified).IsRequired(true).HasColumnName("DateModified").HasColumnType("varchar(255)");
         }

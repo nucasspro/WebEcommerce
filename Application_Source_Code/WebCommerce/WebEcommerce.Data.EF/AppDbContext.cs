@@ -1,14 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using WebEcommerce.Model.Entities;
-using WebEcommerce.Model.Interfaces;
-using WebEcommerce.Utility.Helpers;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using WebEcommerce.Data.EF.EntityConfigurations;
 using WebEcommerce.Data.EF.Extensions;
+using WebEcommerce.Data.Entities;
+using WebEcommerce.Model.Interfaces;
+using WebEcommerce.Utility.Helpers;
 
 namespace WebEcommerce.Data.EF
 {
@@ -21,7 +21,7 @@ namespace WebEcommerce.Data.EF
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        
+
         public DbSet<BillDetail> BillDetails { set; get; }
         public DbSet<Bill> Bills { set; get; }
         public DbSet<Category> Categories { set; get; }
@@ -30,12 +30,14 @@ namespace WebEcommerce.Data.EF
         public DbSet<ProductImage> ProductImages { set; get; }
         public DbSet<ProductQuantity> ProductQuantities { set; get; }
         public DbSet<Size> Sizes { set; get; }
-        
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (optionsBuilder.IsConfigured)
+            {
                 return;
+            }
+
             optionsBuilder.UseSqlServer(GetConnection.GetConnectionString());
         }
 
@@ -57,8 +59,7 @@ namespace WebEcommerce.Data.EF
 
             foreach (EntityEntry item in modified)
             {
-                var changedOrAddedItem = item.Entity as IDateTracking;
-                if (changedOrAddedItem != null)
+                if (item.Entity is IDateTracking changedOrAddedItem)
                 {
                     if (item.State == EntityState.Added)
                     {
@@ -75,12 +76,8 @@ namespace WebEcommerce.Data.EF
     {
         public static string GetConnectionString()
         {
-            IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
-            return connectionString;
+            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+            return configuration.GetConnectionString("DefaultConnection"); ;
         }
     }
 }

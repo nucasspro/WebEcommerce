@@ -3,9 +3,9 @@ using WebEcommerce.Infrastructure.Shared;
 using WebEcommerce.Model.Enums;
 using WebEcommerce.Model.Interfaces;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
-    public class Category: DomainEntity<int>, ISwitchable, IDateTracking 
+    public class Category : DomainEntity<int>, ISwitchable, IDateTracking
     {
         public Category()
         {
@@ -35,6 +35,6 @@ namespace WebEcommerce.Model.Entities
         public int SortOrder { set; get; }
         public Status Status { get; set; }
         public virtual ICollection<Product> Products { set; get; }
-        
+
     }
 }

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29519.161
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Api", "WebCommerce\WebEcommerce.Api.csproj", "{1C08AD9A-7995-43FB-A1CF-47403BF98951}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Data", "WebEcommerce.Data\WebEcommerce.Data.csproj", "{F33F790A-410A-4BE2-ACDC-33E70619AC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Data.Dapper", "WebEcommerce.Data\WebEcommerce.Data.Dapper.csproj", "{F33F790A-410A-4BE2-ACDC-33E70619AC35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Model", "WebEcommerce.Model\WebEcommerce.Model.csproj", "{6655A57D-C9E1-48FE-8B51-B7E3EED43CD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Data", "WebEcommerce.Model\WebEcommerce.Data.csproj", "{6655A57D-C9E1-48FE-8B51-B7E3EED43CD6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Service", "WebEcommer.Service\WebEcommerce.Service.csproj", "{3225BF08-FF5B-47F2-9799-EDC820A29CF0}"
 EndProject
@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{1577F20D-C401-4D06-A7CB-30C1916BAACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEcommerce.Utility", "WebEcommerce.Utility\WebEcommerce.Utility.csproj", "{63D74666-5387-4A13-85DE-0A696055ED00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebEcommerce.Utility", "WebEcommerce.Utility\WebEcommerce.Utility.csproj", "{63D74666-5387-4A13-85DE-0A696055ED00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using WebEcommerce.Infrastructure.Shared;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
-    public class Size: DomainEntity<int>
+    public class Size : DomainEntity<int>
     {
         public Size()
         {

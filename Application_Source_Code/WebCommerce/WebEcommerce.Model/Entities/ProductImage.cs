@@ -1,8 +1,8 @@
 using WebEcommerce.Infrastructure.Shared;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
-    public class ProductImage: DomainEntity<int>
+    public class ProductImage : DomainEntity<int>
     {
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }

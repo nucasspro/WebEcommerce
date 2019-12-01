@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using WebEcommerce.Infrastructure.Shared;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
-    public class Color: DomainEntity<int>
+    public class Color : DomainEntity<int>
     {
         public Color()
         {

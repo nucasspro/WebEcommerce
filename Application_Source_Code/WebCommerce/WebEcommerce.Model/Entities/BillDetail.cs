@@ -1,7 +1,7 @@
 using System.Drawing;
 using WebEcommerce.Infrastructure.Shared;
 
-namespace WebEcommerce.Model.Entities
+namespace WebEcommerce.Data.Entities
 {
     public class BillDetail : DomainEntity<int>
     {
