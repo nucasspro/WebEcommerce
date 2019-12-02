@@ -10,7 +10,7 @@ using WebEcommerce.Data.EF;
 namespace WebEcommerce.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191202154420_InitialDB")]
+    [Migration("20191202174055_InitialDB")]
     partial class InitialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

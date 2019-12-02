@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebEcommerce.Model\WebEcommerce.Data.csproj" />
+    <ProjectReference Include="..\WebEcommerce.Utility\WebEcommerce.Utility.csproj" />
+    <ProjectReference Include="..\WebEcommerce.ViewModel\WebEcommerce.ViewModel.csproj" />
+  </ItemGroup>
 
 </Project>
