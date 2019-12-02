@@ -13,7 +13,7 @@ namespace WebEcommerce.Data.Entities
         }
 
         public Bill(string customerName, string customerAddress, string customerMobile, string customerMessage,
-            BillStatus billStatus, PaymentMethod paymentMethod, Status status, int? customerId)
+            BillStatus billStatus, PaymentMethod paymentMethod, Status status, int? userId)
         {
             CustomerName = customerName;
             CustomerAddress = customerAddress;
@@ -22,11 +22,11 @@ namespace WebEcommerce.Data.Entities
             BillStatus = billStatus;
             PaymentMethod = paymentMethod;
             Status = status;
-            CustomerId = customerId;
+            UserId = userId;
         }
 
         public Bill(int id, string customerName, string customerAddress, string customerMobile, string customerMessage,
-            BillStatus billStatus, PaymentMethod paymentMethod, Status status, int? customerId)
+            BillStatus billStatus, PaymentMethod paymentMethod, Status status, int? userId)
         {
             Id = id;
             CustomerName = customerName;
@@ -36,7 +36,7 @@ namespace WebEcommerce.Data.Entities
             BillStatus = billStatus;
             PaymentMethod = paymentMethod;
             Status = status;
-            CustomerId = customerId;
+            UserId = userId;
         }
 
         public string CustomerName { set; get; }
@@ -49,7 +49,7 @@ namespace WebEcommerce.Data.Entities
         public string DateModified { set; get; }
         public Status Status { set; get; } = Status.Active;
 
-        public int? CustomerId { set; get; }
+        public int? UserId { set; get; }
         public virtual User User { set; get; }
 
         public virtual ICollection<BillDetail> BillDetails { set; get; }

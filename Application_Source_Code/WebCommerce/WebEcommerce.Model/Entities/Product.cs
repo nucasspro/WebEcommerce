@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using WebEcommerce.Infrastructure.Shared;
+using WebEcommerce.Model.Enums;
 
 namespace WebEcommerce.Data.Entities
 {
@@ -25,11 +26,11 @@ namespace WebEcommerce.Data.Entities
         public int? ViewCount { get; set; }
         public string Tags { get; set; }
         public string Unit { get; set; }
+        public Status Status { get; set; }
 
         public virtual ICollection<ProductQuantity> ProductQuantities { set; get; }
         public virtual ICollection<BillDetail> BillDetails { set; get; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
-
 
         public string DateCreated { set; get; }
         public string DateModified { set; get; }

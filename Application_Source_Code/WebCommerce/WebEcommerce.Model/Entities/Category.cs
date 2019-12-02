@@ -28,13 +28,15 @@ namespace WebEcommerce.Data.Entities
         public string Description { get; set; }
         public int? ParentId { get; set; }
         public int? HomeOrder { get; set; }
-        public string Image { get; set; }
         public bool? HomeFlag { get; set; }
-        public string DateCreated { set; get; }
-        public string DateModified { set; get; }
+        public string Image { get; set; }
         public int SortOrder { set; get; }
         public Status Status { get; set; }
+
         public virtual ICollection<Product> Products { set; get; }
+        
+        public string DateCreated { set; get; }
+        public string DateModified { set; get; }
 
     }
 }

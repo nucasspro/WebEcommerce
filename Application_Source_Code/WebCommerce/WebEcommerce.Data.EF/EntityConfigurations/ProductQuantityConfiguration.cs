@@ -16,9 +16,6 @@ namespace WebEcommerce.Data.EF.EntityConfigurations
             entity.Property(x => x.ProductId).IsRequired(true).HasColumnName("ProductId").HasColumnType("int");
             entity.HasOne(x => x.Product).WithMany(y => y.ProductQuantities).HasForeignKey(z => z.ProductId);
 
-            entity.Property(x => x.ProductId).IsRequired(true).HasColumnName("ProductId").HasColumnType("int");
-            entity.HasOne(x => x.Product).WithMany(y => y.ProductQuantities).HasForeignKey(z => z.ProductId);
-
             entity.Property(x => x.SizeId).IsRequired(true).HasColumnName("SizeId").HasColumnType("int");
             entity.HasOne(x => x.Size).WithMany(y => y.ProductQuantities).HasForeignKey(z => z.SizeId);
 

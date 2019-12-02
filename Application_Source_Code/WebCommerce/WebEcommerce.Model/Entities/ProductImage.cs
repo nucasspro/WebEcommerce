@@ -4,6 +4,11 @@ namespace WebEcommerce.Data.Entities
 {
     public class ProductImage : DomainEntity<int>
     {
+        public ProductImage()
+        {
+
+        }
+
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 

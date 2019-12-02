@@ -6,7 +6,7 @@ using WebEcommerce.Model.Enums;
 
 namespace WebEcommerce.Data.EF.EntityConfigurations
 {
-    public class BillConfiguration: DbEntityConfiguration<Bill>
+    public class BillConfiguration : DbEntityConfiguration<Bill>
     {
         public override void Configure(EntityTypeBuilder<Bill> entity)
         {
@@ -23,8 +23,8 @@ namespace WebEcommerce.Data.EF.EntityConfigurations
             entity.Property(x => x.DateCreated).IsRequired(true).HasColumnName("DateCreated").HasColumnType("varchar(255)");
             entity.Property(x => x.DateModified).IsRequired(true).HasColumnName("DateModified").HasColumnType("varchar(255)");
 
-            entity.Property(x => x.CustomerId).IsRequired(false).HasColumnName("CustomerId").HasColumnType("uniqueidentifier");
-            entity.HasOne(x => x.User).WithMany(y => y.Bills).HasForeignKey(z => z.CustomerId);
+            entity.Property(x => x.UserId).IsRequired(false).HasColumnName("UserId").HasColumnType("int");
+            entity.HasOne(x => x.User).WithMany(y => y.Bills).HasForeignKey(z => z.UserId);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace WebEcommerce.Data.Entities
 
         public int Quantity { set; get; }
         public decimal Price { set; get; }
+
         public int ColorId { get; set; }
         public virtual Color Color { set; get; }
 

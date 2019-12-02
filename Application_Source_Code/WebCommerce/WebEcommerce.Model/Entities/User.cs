@@ -12,8 +12,9 @@ namespace WebEcommerce.Data.Entities
 
         }
 
-        public string FullName { get; set; }
-        public DateTime? BirthDay { set; get; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
         public Status Status { get; set; }
         public virtual ICollection<Bill> Bills { get; set; }
     }
