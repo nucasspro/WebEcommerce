@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebEcommerce.Model.Enums;
+using WebEcommerce.Utility.DTOs;
 using WebEcommerce.ViewModel.ViewModels;
 
 namespace WebEcommerce.Service.Interfaces

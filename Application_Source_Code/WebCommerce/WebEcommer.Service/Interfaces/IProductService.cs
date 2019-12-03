@@ -23,6 +23,5 @@ namespace WebEcommerce.Service.Interfaces
         List<ProductViewModel> GetRelatedProducts(int id, int top);
         List<ProductViewModel> GetUpSellProducts(int top);
         bool CheckAvailability(int productId, int size, int color);
-        Task ImportExcelAsync(string filePath, int categoryId);
     }
 }

@@ -24,14 +24,7 @@ namespace WebEcommerce.Data.EF.EntityConfigurations
             entity.Property(x => x.OriginalPrice).IsRequired(true).HasColumnName("OriginalPrice").HasColumnType("decimal");
             entity.Property(x => x.Description).IsRequired(false).HasColumnName("Description").HasColumnType("text");
             entity.Property(x => x.Content).IsRequired(false).HasColumnName("Content").HasColumnType("text");
-            entity.Property(x => x.HomeFlag).IsRequired(false).HasColumnName("HomeFlag").HasColumnType("bit");
-            entity.Property(x => x.HotFlag).IsRequired(false).HasColumnName("HotFlag").HasColumnType("bit");
-            entity.Property(x => x.ViewCount).IsRequired(false).HasColumnName("ViewCount").HasColumnType("int");
-            entity.Property(x => x.Tags).IsRequired(false).HasColumnName("Tags").HasColumnType("nvarchar(255)");
             entity.Property(x => x.Unit).IsRequired(false).HasColumnName("Unit").HasColumnType("nvarchar(255)");
-
-            entity.Property(x => x.DateCreated).IsRequired(true).HasColumnName("DateCreated").HasColumnType("varchar(255)");
-            entity.Property(x => x.DateModified).IsRequired(true).HasColumnName("DateModified").HasColumnType("varchar(255)");
         }
     }
 }

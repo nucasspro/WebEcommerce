@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using WebEcommerce.Data.Entities;
 using WebEcommerce.Infrastructure.Interfaces;
 using WebEcommerce.Service.Interfaces;
+using WebEcommerce.Utility.DTOs;
 using WebEcommerce.ViewModel.ViewModels;
 
 namespace WebEcommerce.Service.Implements
@@ -25,7 +24,6 @@ namespace WebEcommerce.Service.Implements
             _mapper = mapper;
         }
 
-
         public List<UserViewModel> GetAll()
         {
             var users = _userRepository.GetAll().OrderBy(x => x.Id);
@@ -33,19 +31,19 @@ namespace WebEcommerce.Service.Implements
             return usersViewModel;
         }
 
-        public PagedResult<User> GetAllPaging(string keyword, int pageSize, int pageIndex = 1)
+        public PagedResult<UserViewModel> GetAllPaging(string keyword, int pageSize, int pageIndex = 1)
         {
-            var users = _userRepository.Users;
+            var users = _userRepository.GetAll();
             if (!string.IsNullOrEmpty(keyword))
             {
-                users = users.Where(x => x.FullName.Contains(keyword) || x.UserName.Contains(keyword) || x.Email.Contains(keyword));
+                users = users.Where(x => x.Name.Contains(keyword) || x.UserName.Contains(keyword));
             }
             int totalRow = users.Count();
 
             var users2 = users.Skip((pageIndex - 1) * pageSize).Take(pageSize);
-            var usersViewModel = _mapper.Map<List<User>>(users2);
+            var usersViewModel = _mapper.Map<List<UserViewModel>>(users2);
 
-            var paginationSet = new PagedResult<User>()
+            var paginationSet = new PagedResult<UserViewModel>()
             {
                 Results = usersViewModel,
                 CurrentPage = pageIndex,
@@ -55,66 +53,34 @@ namespace WebEcommerce.Service.Implements
             return paginationSet;
         }
 
-        public UserViewModel GetById(string id)
+        public UserViewModel GetById(int id)
         {
             var user = _userRepository.GetById(id);
-            var roles = await _userManager.GetRolesAsync(user);
             var userViewModel = _mapper.Map<UserViewModel>(user);
-            userViewModel.Roles = roles.ToList();
             return userViewModel;
         }
 
-        public async Task<bool> AddAsync(User userViewModel)
+        public UserViewModel Add(UserViewModel userViewModel)
         {
-            try
-            {
-                var dateTimeNow = DateTime.Now;
-                userViewModel.DateCreated = dateTimeNow;
-                userViewModel.DateModified = dateTimeNow;
-                var user = _mapper.Map<AppUser>(userViewModel);
-                var result = await _userManager.CreateAsync(user, userViewModel.Password);
-                if (result.Succeeded && userViewModel.Roles.Count > 0)
-                {
-                    var appUser = await _userManager.FindByNameAsync(user.UserName);
-                    if (appUser != null)
-                    {
-                        await _userManager.AddToRolesAsync(appUser, userViewModel.Roles);
-                    }
-                    await _unitOfWork.CommitAsync();
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            var user = _mapper.Map<User>(userViewModel);
+            _userRepository.Add(user);
+            _unitOfWork.CommitAsync();
+            var userViewModelReturn = _ma
+            return user;
         }
 
-        public async Task UpdateAsync(User userViewModel)
+        public void Update(UserViewModel userViewModel)
         {
-            var user = await _userManager.FindByIdAsync(userViewModel.Id.ToString());
-            var currentRoles = await _userManager.GetRolesAsync(user);
-
-            var result = await _userManager.AddToRolesAsync(user, userViewModel.Roles.Except(currentRoles).AsEnumerable());
-            if (result.Succeeded)
-            {
-                var needRemoveRoles = currentRoles.Except(userViewModel.Roles);
-                await _userManager.RemoveFromRolesAsync(user, needRemoveRoles);
-                user = _mapper.Map<User>(userViewModel);
-                await _userManager.UpdateAsync(user);
-                await _unitOfWork.CommitAsync();
-            }
+            var user = _mapper.Map<User>(userViewModel);
+            _userRepository.Update(user);
+            _unitOfWork.CommitAsync();
         }
 
-        public async Task DeleteAsync(string id)
+        public void Delete(int id)
         {
-            var user = await _userManager.FindByIdAsync(id);
-            await _userManager.DeleteAsync(user);
-            await _unitOfWork.CommitAsync();
+            var user = _userRepository.GetById(id);
+            _userRepository.Remove(user);
+            _unitOfWork.CommitAsync();
         }
 
         #endregion Injections

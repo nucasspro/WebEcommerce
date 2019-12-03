@@ -19,8 +19,6 @@ namespace WebEcommerce.Data.EF
 
         public async Task Seed()
         {
-            var datetime = ConvertDatetime.ConvertToTimeSpan(DateTime.Now);
-
             if (_context.Colors.Count() == 0)
             {
                 List<Color> listColor = new List<Color>()
@@ -52,68 +50,56 @@ namespace WebEcommerce.Data.EF
                     new Category()
                     {
                         Name ="Men shirt",
-                        ParentId = null,
                         Status =Status.Active,
                         SortOrder =1,
-                        DateCreated = datetime,
-                        DateModified = datetime,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 01",DateCreated = datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 02",DateCreated = datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 03",DateCreated = datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 04",DateCreated = datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 05",DateCreated = datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 01", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 02", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 03", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 04", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 05", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     },
                     new Category() {
                         Name = "Women shirt",
-                        ParentId = null,
                         Status =Status.Active,
                         SortOrder = 2,
-                        DateCreated = datetime,
-                        DateModified = datetime,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 06",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 07",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 08",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 09",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 10",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 06", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 07", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 08", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 09", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 10", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     },
                     new Category()
                     {
                         Name ="Men shoes",
-                        ParentId = null,
                         Status =Status.Active ,
                         SortOrder =3,
-                        DateCreated = datetime,
-                        DateModified = datetime,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 11",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 12",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 13",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 14",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 15",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 11", Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 12", Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 13", Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 14", Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 15", Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     },
                     new Category()
                     {
                         Name ="Woment shoes",
-                        ParentId = null,
                         Status =Status.Active,
                         SortOrder =4,
-                        DateCreated = datetime,
-                        DateModified = datetime,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Product 16",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 17",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 18",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 19",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Product 20",DateCreated=datetime, DateModified = datetime, Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 16", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 17", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 18", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 19", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Product 20", Image="/client-side/images/products/product-1.jpg", Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     }
                 };

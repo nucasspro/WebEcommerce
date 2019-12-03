@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebEcommerce.Utility.DTOs;
 using WebEcommerce.ViewModel.ViewModels;
 
 namespace WebEcommerce.Service.Interfaces

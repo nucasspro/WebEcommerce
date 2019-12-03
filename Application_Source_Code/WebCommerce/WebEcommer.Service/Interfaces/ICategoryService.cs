@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WebEcommerce.Utility.DTOs;
 using WebEcommerce.ViewModel.ViewModels;
 
 namespace WebEcommerce.Service.Interfaces

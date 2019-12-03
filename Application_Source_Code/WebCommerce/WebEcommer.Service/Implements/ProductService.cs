@@ -7,6 +7,7 @@ using WebEcommerce.Data.Entities;
 using WebEcommerce.Infrastructure.Interfaces;
 using WebEcommerce.Model.Enums;
 using WebEcommerce.Service.Interfaces;
+using WebEcommerce.Utility.DTOs;
 using WebEcommerce.Utility.Helpers;
 using WebEcommerce.ViewModel.ViewModels;
 

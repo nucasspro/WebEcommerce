@@ -5,38 +5,27 @@ using WebEcommerce.Model.Interfaces;
 
 namespace WebEcommerce.Data.Entities
 {
-    public class Category : DomainEntity<int>, ISwitchable, IDateTracking
+    public class Category : DomainEntity<int>, ISwitchable
     {
         public Category()
         {
             Products = new List<Product>();
         }
 
-        public Category(string name, string description, int? parentId, int? homeOrder,
-            string image, bool? homeFlag, int sortOrder)
+        public Category(string name, string description, string image, int sortOrder)
         {
             Name = name;
             Description = description;
-            ParentId = parentId;
-            HomeOrder = homeOrder;
             Image = image;
-            HomeFlag = homeFlag;
             SortOrder = sortOrder;
         }
 
         public string Name { get; set; }
         public string Description { get; set; }
-        public int? ParentId { get; set; }
-        public int? HomeOrder { get; set; }
-        public bool? HomeFlag { get; set; }
         public string Image { get; set; }
         public int SortOrder { set; get; }
         public Status Status { get; set; }
 
         public virtual ICollection<Product> Products { set; get; }
-        
-        public string DateCreated { set; get; }
-        public string DateModified { set; get; }
-
     }
 }
