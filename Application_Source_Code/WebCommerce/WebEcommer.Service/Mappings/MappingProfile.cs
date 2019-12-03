@@ -33,16 +33,8 @@ namespace WebEcommerce.Service.Mappings
 
             #region Category
 
-            CreateMap<CategoryViewModel, Category>()
-                .ForMember(model => model.DateCreated,
-                    opt => opt.MapFrom(viewmodel => ConvertDatetime.ConvertToTimeSpan(viewmodel.DateCreated)))
-                .ForMember(model => model.DateModified,
-                    opt => opt.MapFrom(viewmodel => ConvertDatetime.ConvertToTimeSpan(viewmodel.DateModified)));
-            CreateMap<Category, CategoryViewModel>()
-                .ForMember(viewmodel => viewmodel.DateCreated,
-                    opt => opt.MapFrom(model => ConvertDatetime.UnixTimestampToDateTime(model.DateCreated)))
-                .ForMember(viewmodel => viewmodel.DateModified,
-                    opt => opt.MapFrom(model => ConvertDatetime.UnixTimestampToDateTime(model.DateModified)));
+            CreateMap<CategoryViewModel, Category>();
+            CreateMap<Category, CategoryViewModel>();
 
             #endregion Category
 
@@ -69,16 +61,8 @@ namespace WebEcommerce.Service.Mappings
 
             #region Product
 
-            CreateMap<ProductViewModel, Product>()
-                .ForMember(model => model.DateCreated,
-                    opt => opt.MapFrom(viewmodel => ConvertDatetime.ConvertToTimeSpan(viewmodel.DateCreated)))
-                .ForMember(model => model.DateModified,
-                    opt => opt.MapFrom(viewmodel => ConvertDatetime.ConvertToTimeSpan(viewmodel.DateModified)));
-            CreateMap<Product, ProductViewModel>()
-                .ForMember(viewmodel => viewmodel.DateCreated,
-                    opt => opt.MapFrom(model => ConvertDatetime.UnixTimestampToDateTime(model.DateCreated)))
-                .ForMember(viewmodel => viewmodel.DateModified,
-                    opt => opt.MapFrom(model => ConvertDatetime.UnixTimestampToDateTime(model.DateModified)));
+            CreateMap<ProductViewModel, Product>();
+            CreateMap<Product, ProductViewModel>();
 
             #endregion Product
 

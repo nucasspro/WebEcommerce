@@ -65,8 +65,7 @@ namespace WebEcommerce.Service.Implements
             var user = _mapper.Map<User>(userViewModel);
             _userRepository.Add(user);
             _unitOfWork.CommitAsync();
-            var userViewModelReturn = _ma
-            return user;
+            return _mapper.Map<UserViewModel>(user);
         }
 
         public void Update(UserViewModel userViewModel)

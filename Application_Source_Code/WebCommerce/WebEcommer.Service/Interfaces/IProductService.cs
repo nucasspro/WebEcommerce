@@ -19,9 +19,7 @@ namespace WebEcommerce.Service.Interfaces
         void AddImages(int productId, string[] images);
         List<ProductImageViewModel> GetImages(int productId);
         List<ProductViewModel> GetLastest(int top);
-        List<ProductViewModel> GetHotProduct(int top);
         List<ProductViewModel> GetRelatedProducts(int id, int top);
-        List<ProductViewModel> GetUpSellProducts(int top);
         bool CheckAvailability(int productId, int size, int color);
     }
 }

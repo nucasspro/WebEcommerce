@@ -10,14 +10,14 @@ using WebEcommerce.Data.EF;
 namespace WebEcommerce.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191202174055_InitialDB")]
-    partial class InitialDB
+    [Migration("20191203165153_InitDB")]
+    partial class InitDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.0-preview3.19554.8")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -136,27 +136,9 @@ namespace WebEcommerce.Data.EF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("DateCreated")
-                        .IsRequired()
-                        .HasColumnName("DateCreated")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("DateModified")
-                        .IsRequired()
-                        .HasColumnName("DateModified")
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("Description")
                         .HasColumnName("Description")
                         .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<bool?>("HomeFlag")
-                        .HasColumnName("HomeFlag")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("HomeOrder")
-                        .HasColumnName("HomeOrder")
-                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .HasColumnName("Image")
@@ -165,10 +147,6 @@ namespace WebEcommerce.Data.EF.Migrations
                     b.Property<string>("Name")
                         .HasColumnName("Name")
                         .HasColumnType("nvarchar(255)");
-
-                    b.Property<int?>("ParentId")
-                        .HasColumnName("ParentId")
-                        .HasColumnType("int");
 
                     b.Property<int>("SortOrder")
                         .HasColumnName("SortOrder")
@@ -220,27 +198,9 @@ namespace WebEcommerce.Data.EF.Migrations
                         .HasColumnName("Content")
                         .HasColumnType("text");
 
-                    b.Property<string>("DateCreated")
-                        .IsRequired()
-                        .HasColumnName("DateCreated")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("DateModified")
-                        .IsRequired()
-                        .HasColumnName("DateModified")
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("Description")
                         .HasColumnName("Description")
                         .HasColumnType("text");
-
-                    b.Property<bool?>("HomeFlag")
-                        .HasColumnName("HomeFlag")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("HotFlag")
-                        .HasColumnName("HotFlag")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Image")
                         .HasColumnName("Image")
@@ -265,20 +225,11 @@ namespace WebEcommerce.Data.EF.Migrations
                         .HasColumnName("PromotionPrice")
                         .HasColumnType("decimal");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tags")
-                        .HasColumnName("Tags")
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Unit")
                         .HasColumnName("Unit")
                         .HasColumnType("nvarchar(255)");
-
-                    b.Property<int?>("ViewCount")
-                        .HasColumnName("ViewCount")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -370,20 +321,15 @@ namespace WebEcommerce.Data.EF.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Name");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Password");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<int>("Status");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("UserName");
 
                     b.HasKey("Id");
 
@@ -402,26 +348,22 @@ namespace WebEcommerce.Data.EF.Migrations
                     b.HasOne("WebEcommerce.Data.Entities.Bill", "Bill")
                         .WithMany("BillDetails")
                         .HasForeignKey("BillId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebEcommerce.Data.Entities.Color", "Color")
                         .WithMany("BillDetails")
                         .HasForeignKey("ColorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebEcommerce.Data.Entities.Product", "Product")
                         .WithMany("BillDetails")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebEcommerce.Data.Entities.Size", "Size")
                         .WithMany("BillDetails")
                         .HasForeignKey("SizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("WebEcommerce.Data.Entities.Product", b =>
@@ -429,8 +371,7 @@ namespace WebEcommerce.Data.EF.Migrations
                     b.HasOne("WebEcommerce.Data.Entities.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("WebEcommerce.Data.Entities.ProductImage", b =>
@@ -438,8 +379,7 @@ namespace WebEcommerce.Data.EF.Migrations
                     b.HasOne("WebEcommerce.Data.Entities.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("WebEcommerce.Data.Entities.ProductQuantity", b =>
@@ -447,20 +387,17 @@ namespace WebEcommerce.Data.EF.Migrations
                     b.HasOne("WebEcommerce.Data.Entities.Color", "Color")
                         .WithMany("ProductQuantities")
                         .HasForeignKey("ColorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebEcommerce.Data.Entities.Product", "Product")
                         .WithMany("ProductQuantities")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebEcommerce.Data.Entities.Size", "Size")
                         .WithMany("ProductQuantities")
                         .HasForeignKey("SizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

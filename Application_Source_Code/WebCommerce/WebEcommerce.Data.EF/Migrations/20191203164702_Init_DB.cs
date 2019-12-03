@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebEcommerce.Data.EF.Migrations
 {
-    public partial class InitialDB : Migration
+    public partial class Init_DB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,17 +12,12 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(255)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(MAX)", nullable: true),
-                    ParentId = table.Column<int>(type: "int", nullable: true),
-                    HomeOrder = table.Column<int>(type: "int", nullable: true),
-                    HomeFlag = table.Column<bool>(type: "bit", nullable: true),
                     Image = table.Column<string>(type: "varchar(255)", nullable: true),
                     SortOrder = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    DateCreated = table.Column<string>(type: "varchar(255)", nullable: false),
-                    DateModified = table.Column<string>(type: "varchar(255)", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +29,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(255)", nullable: true),
                     Code = table.Column<string>(type: "nvarchar(255)", nullable: true)
                 },
@@ -47,7 +43,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(255)", nullable: true)
                 },
                 constraints: table =>
@@ -60,7 +56,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UserName = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
@@ -76,7 +72,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "nvarchar(255)", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     Image = table.Column<string>(type: "varchar(255)", nullable: true),
@@ -85,14 +81,8 @@ namespace WebEcommerce.Data.EF.Migrations
                     OriginalPrice = table.Column<decimal>(type: "decimal", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Content = table.Column<string>(type: "text", nullable: true),
-                    HomeFlag = table.Column<bool>(type: "bit", nullable: true),
-                    HotFlag = table.Column<bool>(type: "bit", nullable: true),
-                    ViewCount = table.Column<int>(type: "int", nullable: true),
-                    Tags = table.Column<string>(type: "nvarchar(255)", nullable: true),
                     Unit = table.Column<string>(type: "nvarchar(255)", nullable: true),
-                    Status = table.Column<int>(nullable: false),
-                    DateCreated = table.Column<string>(type: "varchar(255)", nullable: false),
-                    DateModified = table.Column<string>(type: "varchar(255)", nullable: false)
+                    Status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -110,7 +100,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CustomerName = table.Column<string>(type: "nvarchar(255)", nullable: false),
                     CustomerAddress = table.Column<string>(type: "nvarchar(255)", nullable: false),
                     CustomerMobile = table.Column<string>(type: "nvarchar(255)", nullable: false),
@@ -138,7 +128,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ProductId = table.Column<int>(type: "int", nullable: false),
                     Path = table.Column<string>(type: "varchar(255)", nullable: true),
                     Caption = table.Column<string>(type: "varchar(255)", nullable: true)
@@ -159,7 +149,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ProductId = table.Column<int>(type: "int", nullable: false),
                     SizeId = table.Column<int>(type: "int", nullable: false),
                     ColorId = table.Column<int>(type: "int", nullable: false),
@@ -193,7 +183,7 @@ namespace WebEcommerce.Data.EF.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BillId = table.Column<int>(type: "int", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),

@@ -10,12 +10,12 @@ namespace WebEcommerce.Service.Interfaces
 
         PagedResult<UserViewModel> GetAllPaging(string keyword, int pageIndex, int pageSize);
 
-        UserViewModel GetById(string id);
+        UserViewModel GetById(int id);
 
         UserViewModel Add(UserViewModel appUserViewModel);
 
         void Update(UserViewModel appUserViewModel);
 
-        void Delete(string id);
+        void Delete(int id);
     }
 }

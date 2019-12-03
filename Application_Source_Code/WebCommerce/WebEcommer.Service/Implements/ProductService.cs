@@ -44,8 +44,6 @@ namespace WebEcommerce.Service.Implements
         {
             var product = _mapper.Map<Product>(productViewModel);
             var datimeNow = ConvertDatetime.ConvertToTimeSpan(DateTime.Now);
-            product.DateCreated = datimeNow;
-            product.DateModified = datimeNow;
             _productRepository.Add(product);
             _unitOfWork.Commit();
             return productViewModel;
@@ -104,7 +102,7 @@ namespace WebEcommerce.Service.Implements
 
             var totalRow = query.Count();
 
-            query = query.OrderByDescending(x => x.DateCreated)
+            query = query.OrderByDescending(x => x.Id)
                 .Skip((pageIndex - 1) * pageSize).Take(pageSize);
 
             var data = _mapper.Map<List<ProductViewModel>>(query);
@@ -144,40 +142,22 @@ namespace WebEcommerce.Service.Implements
         public List<ProductViewModel> GetLastest(int top)
         {
             var products = _productRepository.GetAll(x => x.Status == Status.Active)
-                .OrderByDescending(x => x.DateCreated)
+                .OrderByDescending(x => x.Id)
                 .Take(top);
             var productsViewModel = _mapper.Map<List<ProductViewModel>>(products);
             return productsViewModel;
         }
 
-        public List<ProductViewModel> GetHotProduct(int top)
-        {
-            var products = _productRepository
-                .GetAll(x => x.Status == Status.Active && x.HotFlag == true)
-                .OrderByDescending(x => x.DateCreated)
-                .Take(top);
-            var productsViewModel = _mapper.Map<List<ProductViewModel>>(products);
-            return productsViewModel;
-        }
 
         public List<ProductViewModel> GetRelatedProducts(int id, int top)
         {
             var product = _productRepository.GetById(id);
             var relatedProducts = _productRepository
                 .GetAll(x => x.Status == Status.Active && x.Id != id && x.CategoryId == product.CategoryId)
-                .OrderByDescending(x => x.DateCreated)
+                .OrderByDescending(x => x.Id)
                 .Take(top);
             var relatedProductsViewModel = _mapper.Map<List<ProductViewModel>>(relatedProducts);
             return relatedProductsViewModel;
-        }
-
-        public List<ProductViewModel> GetUpSellProducts(int top)
-        {
-            var products = _productRepository
-                            .GetAll(x => x.PromotionPrice != null)
-                            .OrderByDescending(x => x.DateModified).Take(top);
-            var productsViewModel = _mapper.Map<List<ProductViewModel>>(products);
-            return productsViewModel;
         }
 
 
@@ -190,8 +170,6 @@ namespace WebEcommerce.Service.Implements
             var oldProduct = _mapper.Map<Product>(GetById(productViewModel.Id));
 
             var product = _mapper.Map<Product>(productViewModel);
-            product.DateCreated = oldProduct.DateCreated;
-            product.DateModified = ConvertDatetime.ConvertToTimeSpan(DateTime.Now);
 
             _productRepository.Update(product);
             _unitOfWork.Commit();
