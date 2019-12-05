@@ -18,12 +18,18 @@ using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
 using NUShop.Service.Implements;
 using NUShop.Service.Interfaces;
+using DapperService = NUShop.Service.Dapper;
+using DapperRepository = NUShop.Data.Dapper;
 using NUShop.ViewModel.ViewModelConfiguration;
 using NUShop.ViewModel.ViewModels;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using NUShop.Data.Dapper.Implements;
+using NUShop.Data.Dapper.Interfaces;
+using NUShop.Service.Dapper.Interfaces;
+using NUShop.Service.Dapper.Implements;
 
 namespace NUShop.WebAPI
 {
@@ -121,13 +127,25 @@ namespace NUShop.WebAPI
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient(typeof(IRepository<,>), typeof(Repository<,>));
 
+            services.AddTransient<IProductDapperRepository, ProductDapperRepository>();
+
+
+
             //services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipal>();
 
             #region Dependency Injection for Services
 
+            #region EF Service
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductService, ProductService>();
+            #endregion EF Service
+
+            #region Dapper Service
+            services.AddTransient<IProductDapperService, ProductDapperService>();
+            #endregion Dapper Service
+
+
 
             #endregion Dependency Injection for Services
 

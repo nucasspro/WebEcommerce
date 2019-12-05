@@ -11,13 +11,14 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NUShop.Data.EF\NUShop.Data.EF.csproj" />
+    <ProjectReference Include="..\NUShop.Service.Dapper\NUShop.Service.Dapper.csproj" />
     <ProjectReference Include="..\NUShop.Service\NUShop.Service.csproj" />
     <ProjectReference Include="..\NUShop.ViewModel\NUShop.ViewModel.csproj" />
   </ItemGroup>
