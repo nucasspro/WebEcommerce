@@ -1,7 +1,7 @@
 ﻿using NUShop.ViewModel.ViewModels;
 using System.Collections.Generic;
 
-namespace NUShop.Service.Interfaces
+namespace NUShop.Service.EF.Interfaces
 {
     public interface ICommonService
     {

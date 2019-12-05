@@ -19,7 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NUShop.Data.EF\NUShop.Data.EF.csproj" />
     <ProjectReference Include="..\NUShop.Service.Dapper\NUShop.Service.Dapper.csproj" />
-    <ProjectReference Include="..\NUShop.Service\NUShop.Service.csproj" />
+    <ProjectReference Include="..\NUShop.Service\NUShop.Service.EF.csproj" />
     <ProjectReference Include="..\NUShop.ViewModel\NUShop.ViewModel.csproj" />
   </ItemGroup>
 

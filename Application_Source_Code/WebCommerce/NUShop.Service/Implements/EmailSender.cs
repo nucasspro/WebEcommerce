@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class EmailSender : IEmailSender
     {

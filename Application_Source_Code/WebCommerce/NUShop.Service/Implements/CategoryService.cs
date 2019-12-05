@@ -2,7 +2,7 @@
 using NUShop.Data.Entities;
 using NUShop.Data.Enums;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.DTOs;
 using NUShop.Utilities.Helpers;
 using NUShop.ViewModel.ViewModels;
@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class CategoryService : ICategoryService
     {

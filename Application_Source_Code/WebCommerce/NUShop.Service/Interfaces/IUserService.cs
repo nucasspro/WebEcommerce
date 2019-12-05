@@ -5,7 +5,7 @@ using NUShop.Utilities.DTOs;
 using NUShop.ViewModel.ViewModels;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Interfaces
+namespace NUShop.Service.EF.Interfaces
 {
     public interface IUserService
     {

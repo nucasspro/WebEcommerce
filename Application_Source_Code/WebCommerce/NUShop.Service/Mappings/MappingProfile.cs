@@ -3,7 +3,7 @@ using NUShop.Data.Entities;
 using NUShop.Utilities.Helpers;
 using NUShop.ViewModel.ViewModels;
 
-namespace NUShop.Service.Mappings
+namespace NUShop.Service.EF.Mappings
 {
     public class MappingProfile : Profile
     {

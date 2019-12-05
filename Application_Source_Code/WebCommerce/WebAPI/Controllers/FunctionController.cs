@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.ViewModel.ViewModels;
 using System.Collections.Generic;
 using System.Linq;

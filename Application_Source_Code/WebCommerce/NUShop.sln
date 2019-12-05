@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUShop.Utilities", "NUShop.Utilities\NUShop.Utilities.csproj", "{DD564727-01D6-46FD-BDDA-4E8E32928B8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUShop.Service", "NUShop.Service\NUShop.Service.csproj", "{688D247F-FBED-4EBF-8BA3-998C6D39E08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUShop.Service.EF", "NUShop.Service\NUShop.Service.EF.csproj", "{688D247F-FBED-4EBF-8BA3-998C6D39E08B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUShop.Infrastructure", "NUShop.Infrastructure\NUShop.Infrastructure.csproj", "{AF7EA6AA-68BA-43F1-B26E-05AC9ADB03F2}"
 EndProject

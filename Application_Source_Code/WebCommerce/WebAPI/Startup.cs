@@ -16,8 +16,6 @@ using Newtonsoft.Json.Serialization;
 using NUShop.Data.EF;
 using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Implements;
-using NUShop.Service.Interfaces;
 using DapperService = NUShop.Service.Dapper;
 using DapperRepository = NUShop.Data.Dapper;
 using NUShop.ViewModel.ViewModelConfiguration;
@@ -30,6 +28,8 @@ using NUShop.Data.Dapper.Implements;
 using NUShop.Data.Dapper.Interfaces;
 using NUShop.Service.Dapper.Interfaces;
 using NUShop.Service.Dapper.Implements;
+using NUShop.Service.EF.Implements;
+using NUShop.Service.EF.Interfaces;
 
 namespace NUShop.WebAPI
 {

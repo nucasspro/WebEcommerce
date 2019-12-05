@@ -3,7 +3,7 @@ using NUShop.ViewModel.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Interfaces
+namespace NUShop.Service.EF.Interfaces
 {
     public interface IBlogService
     {

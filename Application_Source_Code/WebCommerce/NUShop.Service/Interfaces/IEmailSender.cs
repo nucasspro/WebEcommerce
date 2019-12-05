@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Interfaces
+namespace NUShop.Service.EF.Interfaces
 {
     public interface IEmailSender
     {

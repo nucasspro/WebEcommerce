@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using NUShop.Service.Interfaces;
 using NUShop.ViewModel.ViewModels;
 using NUShop.Utilities.Helpers;
 using System.Linq;
+using NUShop.Service.EF.Interfaces;
 
 namespace NUShop.WebAPI.Controllers
 {

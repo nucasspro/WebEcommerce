@@ -2,7 +2,7 @@
 using NUShop.Data.Entities;
 using NUShop.Data.Enums;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.Constants;
 using NUShop.Utilities.DTOs;
 using NUShop.Utilities.Helpers;
@@ -14,7 +14,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class ProductService : IProductService
     {
@@ -383,7 +383,7 @@ namespace NUShop.Service.Implements
 
                     var dateTimeNow = DateTime.Now;
                     product.DateCreated = ConvertDatetime.ConvertToTimeSpan(dateTimeNow);
-                    product.DateModified= ConvertDatetime.ConvertToTimeSpan(dateTimeNow);
+                    product.DateModified = ConvertDatetime.ConvertToTimeSpan(dateTimeNow);
 
                     _productRepository.Add(product);
                     await _unitOfWork.CommitAsync();

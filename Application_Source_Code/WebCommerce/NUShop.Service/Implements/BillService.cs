@@ -2,7 +2,7 @@
 using NUShop.Data.Entities;
 using NUShop.Data.Enums;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.DTOs;
 using NUShop.Utilities.Helpers;
 using NUShop.ViewModel.ViewModels;
@@ -12,7 +12,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class BillService : IBillService
     {
@@ -119,7 +119,7 @@ namespace NUShop.Service.Implements
         {
             var bill = _billRepository.GetSingle(x => x.Id == billId);
             var billViewModel = _mapper.Map<BillViewModel>(bill);
-            var billDetails = _billDetailRepository.GetAll(x=>x.BillId == billId);
+            var billDetails = _billDetailRepository.GetAll(x => x.BillId == billId);
             var billDetailsViewModel = _mapper.Map<List<BillDetailViewModel>>(billDetails);
             billViewModel.BillDetails = billDetailsViewModel;
             return billViewModel;

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.DTOs;
 using NUShop.ViewModel.ViewModels;
 using System;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class RoleService : IRoleService
     {
@@ -80,7 +80,7 @@ namespace NUShop.Service.Implements
             return paginationSet;
         }
 
-        public async Task<bool> AddAsync(AnnouncementViewModel announcementViewModel, List<AnnouncementUserViewModel>  announcementUserViewModels, AppRoleViewModel appRoleViewModel)
+        public async Task<bool> AddAsync(AnnouncementViewModel announcementViewModel, List<AnnouncementUserViewModel> announcementUserViewModels, AppRoleViewModel appRoleViewModel)
         {
             var role = new AppRole()
             {
@@ -141,10 +141,10 @@ namespace NUShop.Service.Implements
                         join p in permissions on f.Id equals p.FunctionId
                         join r in _roleManager.Roles on p.RoleId equals r.Id
                         where roles.Contains(r.Name) && f.Id == functionId
-                        && ((p.CanCreate && action == "Create")
-                        || (p.CanUpdate && action == "Update")
-                        || (p.CanDelete && action == "Delete")
-                        || (p.CanRead && action == "Read"))
+                        && (p.CanCreate && action == "Create"
+                        || p.CanUpdate && action == "Update"
+                        || p.CanDelete && action == "Delete"
+                        || p.CanRead && action == "Read")
                         select p;
             return query.AnyAsync();
         }

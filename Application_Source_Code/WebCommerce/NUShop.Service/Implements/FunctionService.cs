@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using NUShop.Data.Entities;
 using NUShop.Data.Enums;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.ViewModel.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class FunctionService : IFunctionService
     {

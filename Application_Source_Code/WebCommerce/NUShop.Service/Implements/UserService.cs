@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.DTOs;
 using NUShop.ViewModel.ViewModels;
 using System;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class UserService : IUserService
     {

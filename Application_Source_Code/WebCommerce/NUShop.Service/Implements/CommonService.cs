@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
-using NUShop.Service.Interfaces;
+using NUShop.Service.EF.Interfaces;
 using NUShop.Utilities.Constants;
 using NUShop.ViewModel.ViewModels;
 using System.Collections.Generic;
 
-namespace NUShop.Service.Implements
+namespace NUShop.Service.EF.Implements
 {
     public class CommonService : ICommonService
     {
