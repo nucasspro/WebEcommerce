@@ -30,7 +30,7 @@ namespace NUShop.WebAPI.Controllers
 
         #region GET: api/Product
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             var products = _productService.GetAll();

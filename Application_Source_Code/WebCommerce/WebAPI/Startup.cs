@@ -16,8 +16,6 @@ using Newtonsoft.Json.Serialization;
 using NUShop.Data.EF;
 using NUShop.Data.Entities;
 using NUShop.Infrastructure.Interfaces;
-using DapperService = NUShop.Service.Dapper;
-using DapperRepository = NUShop.Data.Dapper;
 using NUShop.ViewModel.ViewModelConfiguration;
 using NUShop.ViewModel.ViewModels;
 using Swashbuckle.AspNetCore.Swagger;
@@ -128,6 +126,7 @@ namespace NUShop.WebAPI
             services.AddTransient(typeof(IRepository<,>), typeof(Repository<,>));
 
             services.AddTransient<IProductDapperRepository, ProductDapperRepository>();
+            services.AddTransient<ICategoryDapperRepository, CategoryDapperRepository>();
 
 
 
@@ -143,6 +142,7 @@ namespace NUShop.WebAPI
 
             #region Dapper Service
             services.AddTransient<IProductDapperService, ProductDapperService>();
+            services.AddTransient<ICategoryDapperService, CategoryDapperService>();
             #endregion Dapper Service
 
 
@@ -153,12 +153,16 @@ namespace NUShop.WebAPI
 
             #region Swagger
 
-            services.AddSwaggerGen(
-                c =>
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
                 {
-                    c.SwaggerDoc("v1", new Info { Title = "Core API", Description = "Swagger Core API" });
-                }
-                );
+                    Version = "v1",
+                    Title = "Core API Documentation",
+                    Description = "Swagger Core API",
+                    Contact = new Swashbuckle.AspNetCore.Swagger.Contact() { Name = "Đặng Nhật Hải Long", Email = "hailongdang.hailong@gmail.com" }
+                });
+            });
 
             #endregion Swagger
 
@@ -166,11 +170,8 @@ namespace NUShop.WebAPI
 
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowAllOrigin",
-                    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+                options.AddPolicy("AllowAllOrigin", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
-                options.AddPolicy("Localhost",
-                    builder => builder.WithOrigins("https://localhost:5001", "http://localhost:5000").AllowAnyHeader().AllowAnyMethod());
             });
 
             services.AddCors();
@@ -191,8 +192,13 @@ namespace NUShop.WebAPI
             }
 
             app.UseHttpsRedirection();
+
             app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Core API"); });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API");
+            });
+
             app.UseCors("AllowAllOrigin");
             app.UseAuthentication();
             app.UseMvc();
