@@ -10,14 +10,14 @@ namespace NUShop.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoryController : ControllerBase
+    public class CategoryEFController : ControllerBase
     {
         #region Injections
 
         private readonly ICategoryService _categoryService;
-        private readonly ILogger<CategoryController> _logger;
+        private readonly ILogger<CategoryEFController> _logger;
 
-        public CategoryController(ICategoryService categoryService, ILogger<CategoryController> logger)
+        public CategoryEFController(ICategoryService categoryService, ILogger<CategoryEFController> logger)
         {
             _categoryService = categoryService;
             _logger = logger;
@@ -48,24 +48,25 @@ namespace NUShop.WebAPI.Controllers
             return new ObjectResult(model);
         }
 
+
         #endregion GET: api/Category/1
 
-        [HttpPut]
-        public IActionResult UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
-        {
-            if (!ModelState.IsValid)
-            {
-                return new BadRequestObjectResult(ModelState);
-            }
+        //[HttpPut]
+        //public IActionResult UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return new BadRequestObjectResult(ModelState);
+        //    }
 
-            if (sourceId == targetId)
-            {
-                return new BadRequestResult();
-            }
+        //    if (sourceId == targetId)
+        //    {
+        //        return new BadRequestResult();
+        //    }
 
-            _categoryService.UpdateParentId(sourceId, targetId, items);
-            return new OkResult();
-        }
+        //    _categoryService.UpdateParentId(sourceId, targetId, items);
+        //    return new OkResult();
+        //}
 
         #region POST: api/Category
 
@@ -92,38 +93,38 @@ namespace NUShop.WebAPI.Controllers
 
         #endregion POST: api/Category
 
-        [HttpPost("ReOrder/")]
-        public IActionResult ReOrder(int sourceId, int targetId)
-        {
-            if (!ModelState.IsValid)
-            {
-                return new BadRequestObjectResult(ModelState);
-            }
+        //[HttpPost("ReOrder/")]
+        //public IActionResult ReOrder(int sourceId, int targetId)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return new BadRequestObjectResult(ModelState);
+        //    }
 
-            if (sourceId == targetId)
-            {
-                return new BadRequestResult();
-            }
+        //    if (sourceId == targetId)
+        //    {
+        //        return new BadRequestResult();
+        //    }
 
-            _categoryService.ReOrder(sourceId, targetId);
-            return new OkResult();
-        }
+        //    _categoryService.ReOrder(sourceId, targetId);
+        //    return new OkResult();
+        //}
 
-        #region DELETE: api/Category/1
+        //#region DELETE: api/Category/1
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            if (id == 0)
-            {
-                return new BadRequestResult();
-            }
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return new BadRequestResult();
+        //    }
 
-            _categoryService.Delete(id);
-            return new OkObjectResult(id);
-        }
+        //    _categoryService.Delete(id);
+        //    return new OkObjectResult(id);
+        //}
 
-        #endregion DELETE: api/Category/1
+        //#endregion DELETE: api/Category/1
 
         #endregion REST
     }

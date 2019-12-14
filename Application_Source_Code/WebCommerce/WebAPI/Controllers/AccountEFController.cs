@@ -18,16 +18,16 @@ namespace NUShop.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class AccountEFController : ControllerBase
     {
         #region Injections
 
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
-        private readonly ILogger<AccountController> _logger;
+        private readonly ILogger<AccountEFController> _logger;
         private readonly IConfiguration _config;
 
-        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, ILogger<AccountController> logger, IConfiguration config)
+        public AccountEFController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, ILogger<AccountEFController> logger, IConfiguration config)
         {
             _signInManager = signInManager;
             _userManager = userManager;

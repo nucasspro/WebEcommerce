@@ -55,10 +55,11 @@ namespace NUShop.Service.EF.Implements
         public ProductViewModel Add(ProductViewModel productViewModel)
         {
             var productTags = new List<ProductTag>();
-            if (string.IsNullOrEmpty(productViewModel.Tags))
-                return productViewModel;
+            //if (string.IsNullOrEmpty(productViewModel.Tags))
+            //    return productViewModel;
 
-            var tags = productViewModel.Tags.Split(',');
+            //var tags = productViewModel.Tags.Split(',');
+            var tags = new List<string> { "tag 1", "tag 2" };
             foreach (var t in tags)
             {
                 var tagId = TextHelper.ToUnsignString(t);
@@ -267,10 +268,12 @@ namespace NUShop.Service.EF.Implements
         public void Update(ProductViewModel productViewModel)
         {
             var productTags = new List<ProductTag>();
-            if (!string.IsNullOrEmpty(productViewModel.Tags))
-            {
-                var tags = productViewModel.Tags.Split(',');
-                foreach (var t in tags)
+            //if (!string.IsNullOrEmpty(productViewModel.Tags))
+            //{
+
+            //var tags = productViewModel.Tags.Split(',');
+            var tags = new List<string> { "tag 1", "tag 2" };
+            foreach (var t in tags)
                 {
                     var tagId = TextHelper.ToUnsignString(t);
                     if (!_tagRepository.GetAll(x => x.Id == tagId).Any())
@@ -290,7 +293,7 @@ namespace NUShop.Service.EF.Implements
                     };
                     productTags.Add(productTag);
                 }
-            }
+            //}
 
             var oldProduct = _mapper.Map<Product>(GetById(productViewModel.Id));
 

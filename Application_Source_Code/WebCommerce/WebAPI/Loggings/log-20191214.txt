@@ -1,0 +1,626 @@
+2019-12-14T21:53:27.6943522+07:00 0HLS0KLG74BE3:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/a   (ca22a1cb)
+2019-12-14T21:53:28.3520249+07:00 0HLS0KLG74BE3:00000001 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T21:53:28.4035906+07:00 0HLS0KLG74BE3:00000001 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T21:53:30.2699538+07:00 0HLS0KLG74BE3:00000001 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:18:34.8707738+07:00 0HLS0M528L9LJ:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/   (ca22a1cb)
+2019-12-14T23:18:35.1478832+07:00 0HLS0M528L9LJ:00000001 [INF] Request finished in 264.7681ms 404  (791a596a)
+2019-12-14T23:18:40.3822748+07:00 0HLS0M528L9LJ:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger   (ca22a1cb)
+2019-12-14T23:18:40.3865218+07:00 0HLS0M528L9LJ:00000002 [INF] Request finished in 5.3791ms 301  (791a596a)
+2019-12-14T23:18:40.4021024+07:00 0HLS0M528L9LJ:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/index.html   (ca22a1cb)
+2019-12-14T23:18:40.5881935+07:00 0HLS0M528L9LJ:00000003 [INF] Request finished in 185.5607ms 200 text/html (791a596a)
+2019-12-14T23:18:40.6374922+07:00 0HLS0M528L9LJ:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/swagger-ui.css   (ca22a1cb)
+2019-12-14T23:18:40.6447748+07:00 0HLS0M528L9LI:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-12-14T23:18:40.6578206+07:00 0HLS0M528L9LK:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-12-14T23:18:40.7865144+07:00 0HLS0M528L9LJ:00000004 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-12-14T23:18:40.8098908+07:00 0HLS0M528L9LK:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-12-14T23:18:40.8149539+07:00 0HLS0M528L9LJ:00000004 [INF] Request finished in 165.6969ms 200 text/css (791a596a)
+2019-12-14T23:18:40.8759931+07:00 0HLS0M528L9LK:00000001 [INF] Request finished in 157.4981ms 200 application/javascript (791a596a)
+2019-12-14T23:18:40.8830660+07:00 0HLS0M528L9LI:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-12-14T23:18:40.9312635+07:00 0HLS0M528L9LI:00000001 [INF] Request finished in 251.1724ms 200 application/javascript (791a596a)
+2019-12-14T23:18:42.1510752+07:00 0HLS0M528L9LI:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-14T23:18:42.1521247+07:00 0HLS0M528L9LK:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/favicon-32x32.png   (ca22a1cb)
+2019-12-14T23:18:42.1594988+07:00 0HLS0M528L9LK:00000002 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2019-12-14T23:18:42.1647522+07:00 0HLS0M528L9LK:00000002 [INF] Request finished in 10.9717ms 200 image/png (791a596a)
+2019-12-14T23:18:42.4054386+07:00 0HLS0M528L9LI:00000002 [INF] Request finished in 252.8832ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-14T23:18:49.9310762+07:00 0HLS0M528L9LI:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Product/GetAll   (ca22a1cb)
+2019-12-14T23:18:49.9499656+07:00 0HLS0M528L9LI:00000003 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:18:49.9880625+07:00 0HLS0M528L9LI:00000003 [INF] Route matched with "{action = \"GetAll\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAll()" on controller "NUShop.WebAPI.Controllers.ProductController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:18:50.9782939+07:00 0HLS0M528L9LI:00000003 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:19:00.5143780+07:00 0HLS0M528L9LI:00000003 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:19:00.9602170+07:00 0HLS0M528L9LI:00000003 [INF] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM [Products] AS [p]" (0723d8ff)
+2019-12-14T23:19:00.9915187+07:00 0HLS0M528L9LI:00000003 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 10003.6499ms. (50a9e262)
+2019-12-14T23:19:01.0081214+07:00 0HLS0M528L9LI:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[NUShop.ViewModel.ViewModels.ProductViewModel, NUShop.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-12-14T23:19:01.0370170+07:00 0HLS0M528L9LI:00000003 [INF] Executed action "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)" in 11040.4852ms (afa2e885)
+2019-12-14T23:19:01.0413293+07:00 0HLS0M528L9LI:00000003 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:19:01.0755734+07:00 0HLS0M528L9LI:00000003 [INF] Request finished in 11115.9204ms 200 application/json; charset=utf-8 (791a596a)
+2019-12-14T23:30:52.8001288+07:00 0HLS0MBU74AN4:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/index.html   (ca22a1cb)
+2019-12-14T23:30:53.0722949+07:00 0HLS0MBU74AN4:00000001 [INF] Request finished in 281.7275ms 200 text/html (791a596a)
+2019-12-14T23:30:53.3339948+07:00 0HLS0MBU74AN4:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-14T23:30:53.3339788+07:00 0HLS0MBU74AN3:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/swagger/favicon-32x32.png   (ca22a1cb)
+2019-12-14T23:30:53.3909234+07:00 0HLS0MBU74AN3:00000001 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2019-12-14T23:30:53.3950948+07:00 0HLS0MBU74AN3:00000001 [INF] Request finished in 59.6588ms 200 image/png (791a596a)
+2019-12-14T23:30:53.7928767+07:00 0HLS0MBU74AN4:00000002 [INF] Request finished in 437.9739ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-14T23:31:33.5327415+07:00 0HLS0MBU74AN4:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/Product/GetAll   (ca22a1cb)
+2019-12-14T23:31:33.6634569+07:00 0HLS0MBU74AN4:00000003 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:31:33.6916915+07:00 0HLS0MBU74AN4:00000003 [INF] Route matched with "{action = \"GetAll\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAll()" on controller "NUShop.WebAPI.Controllers.ProductController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:31:34.6522684+07:00 0HLS0MBU74AN4:00000003 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:31:35.2418937+07:00 0HLS0MBU74AN4:00000003 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:31:35.6296716+07:00 0HLS0MBU74AN4:00000003 [INF] Executed DbCommand ("68"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM [Products] AS [p]" (0723d8ff)
+2019-12-14T23:31:35.6585691+07:00 0HLS0MBU74AN4:00000003 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 998.2573ms. (50a9e262)
+2019-12-14T23:31:35.6717302+07:00 0HLS0MBU74AN4:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[NUShop.ViewModel.ViewModels.ProductViewModel, NUShop.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2019-12-14T23:31:35.7034951+07:00 0HLS0MBU74AN4:00000003 [INF] Executed action "NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)" in 2002.0418ms (afa2e885)
+2019-12-14T23:31:35.7054688+07:00 0HLS0MBU74AN4:00000003 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductController.GetAll (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:31:35.7116985+07:00 0HLS0MBU74AN4:00000003 [INF] Request finished in 2180.46ms 200 application/json; charset=utf-8 (791a596a)
+2019-12-14T23:31:43.9944570+07:00 0HLS0MBU74AN4:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/Product 1   (ca22a1cb)
+2019-12-14T23:31:44.0097360+07:00 0HLS0MBU74AN4:00000004 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:31:44.0344336+07:00 0HLS0MBU74AN4:00000004 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:31:44.1318978+07:00 0HLS0MBU74AN4:00000004 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:31:53.0341696+07:00 0HLS0MBU74AN4:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:31:53.1104323+07:00 0HLS0MBU74AN4:00000004 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:31:53.4920897+07:00 0HLS0MBU74AN4:00000004 [ERR] Failed executing DbCommand ("91"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select Name, Price, ViewCount, Status from Products where name = Product 1
+) AS [p]" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15
+2019-12-14T23:31:53.5268767+07:00 0HLS0MBU74AN4:00000004 [ERR] An exception occurred while iterating over the results of a query for context type '"NUShop.Data.EF.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15" (f5c7ac34)
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15
+2019-12-14T23:31:53.5762627+07:00 0HLS0MBU74AN4:00000004 [ERR] An exception occurred while iterating over the results of a query for context type '"NUShop.Data.EF.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15" (f5c7ac34)
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct(String name) in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\WebAPI\Controllers\ProductsSqlRawController.cs:line 53
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15
+2019-12-14T23:32:24.3436329+07:00 0HLS0MBU74AN4:00000004 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 40306.7044ms (afa2e885)
+2019-12-14T23:32:24.3487912+07:00 0HLS0MBU74AN4:00000004 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:32:24.4071678+07:00 0HLS0MBU74AN4:00000004 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '1'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct(String name) in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\WebAPI\Controllers\ProductsSqlRawController.cs:line 53
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:e60d4de4-42b6-48ef-9c22-257b0f2ef15d
+Error Number:102,State:1,Class:15
+2019-12-14T23:32:24.5584531+07:00 0HLS0MBU74AN4:00000004 [INF] Request finished in 40563.0233ms 500 text/html; charset=utf-8 (791a596a)
+2019-12-14T23:33:37.3015910+07:00 0HLS0MDF86G3S:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/Product 1   (ca22a1cb)
+2019-12-14T23:33:37.5663085+07:00 0HLS0MDF86G3S:00000001 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:33:37.6192518+07:00 0HLS0MDF86G3S:00000001 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:33:39.3122779+07:00 0HLS0MDF86G3S:00000001 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:33:49.2800391+07:00 0HLS0MDF86G3S:00000001 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:33:49.4247883+07:00 0HLS0MDF86G3S:00000001 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:33:49.7964314+07:00 0HLS0MDF86G3S:00000001 [ERR] Failed executing DbCommand ("69"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select Name, Price, ViewCount, Status from Products where name = 'Product 1'
+) AS [p]" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16
+2019-12-14T23:33:49.8190700+07:00 0HLS0MDF86G3S:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"NUShop.Data.EF.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16" (f5c7ac34)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16
+2019-12-14T23:33:49.8411978+07:00 0HLS0MDF86G3S:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"NUShop.Data.EF.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16" (f5c7ac34)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16
+2019-12-14T23:34:50.7338714+07:00 0HLS0MDF86G3S:00000001 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 73082.8931ms (afa2e885)
+2019-12-14T23:34:50.7450311+07:00 0HLS0MDF86G3S:00000001 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:34:50.8179738+07:00 0HLS0MDF86G3S:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Id'.
+Invalid column name 'CategoryId'.
+Invalid column name 'Content'.
+Invalid column name 'DateCreated'.
+Invalid column name 'DateModified'.
+Invalid column name 'Description'.
+Invalid column name 'HomeFlag'.
+Invalid column name 'HotFlag'.
+Invalid column name 'Image'.
+Invalid column name 'OriginalPrice'.
+Invalid column name 'PromotionPrice'.
+Invalid column name 'SeoAlias'.
+Invalid column name 'SeoDescription'.
+Invalid column name 'SeoKeywords'.
+Invalid column name 'SeoPageTitle'.
+Invalid column name 'Tags'.
+Invalid column name 'Unit'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct(String name) in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\WebAPI\Controllers\ProductsSqlRawController.cs:line 53
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:bf2cb9ab-764a-420c-bcf8-caf5b2596787
+Error Number:207,State:1,Class:16
+2019-12-14T23:34:51.0553657+07:00 0HLS0MDF86G3S:00000001 [INF] Request finished in 73740.6578ms 500 text/html; charset=utf-8 (791a596a)
+2019-12-14T23:41:06.2721276+07:00 0HLS0MHL2HUEU:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/Product 1   (ca22a1cb)
+2019-12-14T23:41:06.4628372+07:00 0HLS0MHL2HUEU:00000001 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:41:06.5071334+07:00 0HLS0MHL2HUEU:00000001 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:41:08.3605425+07:00 0HLS0MHL2HUEU:00000001 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:41:09.1199312+07:00 0HLS0MHL2HUEU:00000001 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:41:09.2182621+07:00 0HLS0MHL2HUEU:00000001 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:41:09.5950291+07:00 0HLS0MHL2HUEU:00000001 [INF] Executed DbCommand ("96"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select * from Products where name = 'Product 1'
+) AS [p]" (0723d8ff)
+2019-12-14T23:41:09.7911814+07:00 0HLS0MHL2HUEU:00000001 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1421.5633ms. (50a9e262)
+2019-12-14T23:41:09.8185171+07:00 0HLS0MHL2HUEU:00000001 [INF] Executing ObjectResult, writing value of type '"NUShop.ViewModel.ViewModels.ProductViewModel"'. (8a1b66c8)
+2019-12-14T23:41:09.9539727+07:00 0HLS0MHL2HUEU:00000001 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 3437.9841ms (afa2e885)
+2019-12-14T23:41:09.9561682+07:00 0HLS0MHL2HUEU:00000001 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:41:09.9713371+07:00 0HLS0MHL2HUEU:00000001 [INF] Request finished in 3708.0026ms 200 application/json; charset=utf-8 (791a596a)
+2019-12-14T23:41:26.1623201+07:00 0HLS0MHL2HUEU:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/Product 18   (ca22a1cb)
+2019-12-14T23:41:26.1703581+07:00 0HLS0MHL2HUEU:00000002 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:41:26.1748580+07:00 0HLS0MHL2HUEU:00000002 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:41:26.2442241+07:00 0HLS0MHL2HUEU:00000002 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:41:29.2466616+07:00 0HLS0MHL2HUEU:00000002 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:41:29.2828841+07:00 0HLS0MHL2HUEU:00000002 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:41:29.3561796+07:00 0HLS0MHL2HUEU:00000002 [INF] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select * from Products where name = 'Product 18'
+) AS [p]" (0723d8ff)
+2019-12-14T23:42:12.6527505+07:00 0HLS0MHL2HUEU:00000002 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 46382.3428ms. (50a9e262)
+2019-12-14T23:42:12.6563883+07:00 0HLS0MHL2HUEU:00000002 [INF] Executing ObjectResult, writing value of type '"NUShop.ViewModel.ViewModels.ProductViewModel"'. (8a1b66c8)
+2019-12-14T23:42:12.6685807+07:00 0HLS0MHL2HUEU:00000002 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 46482.4227ms (afa2e885)
+2019-12-14T23:42:12.6718112+07:00 0HLS0MHL2HUEU:00000002 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:42:12.6778727+07:00 0HLS0MHL2HUEU:00000002 [INF] Request finished in 46513.5415ms 200 application/json; charset=utf-8 (791a596a)
+2019-12-14T23:42:42.2478259+07:00 0HLS0MHL2HUEU:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/Product 100 or id = 1   (ca22a1cb)
+2019-12-14T23:42:42.2517182+07:00 0HLS0MHL2HUEU:00000003 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:42:42.2577736+07:00 0HLS0MHL2HUEU:00000003 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:42:42.2939040+07:00 0HLS0MHL2HUEU:00000003 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:42:51.6963928+07:00 0HLS0MHL2HUEU:00000003 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:42:51.7277807+07:00 0HLS0MHL2HUEU:00000003 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:42:51.8027217+07:00 0HLS0MHL2HUEU:00000003 [INF] Executed DbCommand ("55"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select * from Products where name = 'Product 100 or id = 1'
+) AS [p]" (0723d8ff)
+2019-12-14T23:43:32.5835641+07:00 0HLS0MHL2HUEU:00000003 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.NotFoundResult" in 50269.1238ms. (50a9e262)
+2019-12-14T23:43:32.5928221+07:00 0HLS0MHL2HUEU:00000003 [INF] Executing ObjectResult, writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'. (8a1b66c8)
+2019-12-14T23:43:32.6589256+07:00 0HLS0MHL2HUEU:00000003 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 50367.4599ms (afa2e885)
+2019-12-14T23:43:32.6820193+07:00 0HLS0MHL2HUEU:00000003 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:43:32.7596257+07:00 0HLS0MHL2HUEU:00000003 [INF] Request finished in 50437.1027ms 404 application/problem+json; charset=utf-8 (791a596a)
+2019-12-14T23:45:04.4075038+07:00 0HLS0MHL2HUEU:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/'or id = 1--   (ca22a1cb)
+2019-12-14T23:45:04.4106194+07:00 0HLS0MHL2HUEU:00000004 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:45:04.4142803+07:00 0HLS0MHL2HUEU:00000004 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:45:04.4506659+07:00 0HLS0MHL2HUEU:00000004 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:45:08.6103286+07:00 0HLS0MHL2HUEU:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:45:08.6439028+07:00 0HLS0MHL2HUEU:00000004 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:45:08.7038297+07:00 0HLS0MHL2HUEU:00000004 [INF] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select * from Products where name = ''or id = 1--'
+) AS [p]" (0723d8ff)
+2019-12-14T23:45:17.9043740+07:00 0HLS0MHL2HUEU:00000004 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 13451.1331ms. (50a9e262)
+2019-12-14T23:45:17.9067226+07:00 0HLS0MHL2HUEU:00000004 [INF] Executing ObjectResult, writing value of type '"NUShop.ViewModel.ViewModels.ProductViewModel"'. (8a1b66c8)
+2019-12-14T23:45:20.1383086+07:00 0HLS0MHL2HUEU:00000004 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 15715.869ms (afa2e885)
+2019-12-14T23:45:20.1413368+07:00 0HLS0MHL2HUEU:00000004 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:45:20.1509862+07:00 0HLS0MHL2HUEU:00000004 [INF] Request finished in 15792.1312ms 200 application/json; charset=utf-8 (791a596a)
+2019-12-14T23:45:28.9378903+07:00 0HLS0MHL2HUEU:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductsSqlRaw/'or id = 6--   (ca22a1cb)
+2019-12-14T23:45:28.9416477+07:00 0HLS0MHL2HUEU:00000005 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (500cc934)
+2019-12-14T23:45:28.9452381+07:00 0HLS0MHL2HUEU:00000005 [INF] Route matched with "{action = \"GetProduct\", controller = \"ProductsSqlRaw\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[NUShop.ViewModel.ViewModels.ProductViewModel] GetProduct(System.String)" on controller "NUShop.WebAPI.Controllers.ProductsSqlRawController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-14T23:45:28.9876811+07:00 0HLS0MHL2HUEU:00000005 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-14T23:45:30.4702597+07:00 0HLS0MHL2HUEU:00000005 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-14T23:45:30.4823221+07:00 0HLS0MHL2HUEU:00000005 [WRN] Query: '"(from Product <generated>_2 in DbSet<Product> select [<generated>_2]).FirstOrDefault()"' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results. (6af4db4b)
+2019-12-14T23:45:30.5709432+07:00 0HLS0MHL2HUEU:00000005 [INF] Executed DbCommand ("64"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM (
+    select * from Products where name = ''or id = 6--'
+) AS [p]" (0723d8ff)
+2019-12-14T23:45:30.5765144+07:00 0HLS0MHL2HUEU:00000005 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1583.8207ms. (50a9e262)
+2019-12-14T23:45:30.5811401+07:00 0HLS0MHL2HUEU:00000005 [INF] Executing ObjectResult, writing value of type '"NUShop.ViewModel.ViewModels.ProductViewModel"'. (8a1b66c8)
+2019-12-14T23:45:30.5874224+07:00 0HLS0MHL2HUEU:00000005 [INF] Executed action "NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)" in 1637.0731ms (afa2e885)
+2019-12-14T23:45:30.5950221+07:00 0HLS0MHL2HUEU:00000005 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductsSqlRawController.GetProduct (NUShop.WebAPI)"' (99874f2b)
+2019-12-14T23:45:30.6010695+07:00 0HLS0MHL2HUEU:00000005 [INF] Request finished in 1659.4243ms 200 application/json; charset=utf-8 (791a596a)

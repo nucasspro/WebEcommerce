@@ -9,15 +9,15 @@ namespace NUShop.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductEFController : ControllerBase
     {
         #region Injections
 
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
-        private readonly ILogger<ProductController> _logger;
+        private readonly ILogger<ProductEFController> _logger;
 
-        public ProductController(IProductService productService, ICategoryService categoryService, ILogger<ProductController> logger)
+        public ProductEFController(IProductService productService, ICategoryService categoryService, ILogger<ProductEFController> logger)
         {
             _productService = productService;
             _categoryService = categoryService;
@@ -39,20 +39,20 @@ namespace NUShop.WebAPI.Controllers
 
         #endregion GET: api/Product
 
-        #region GET: api/Product/GetAllPaging?
+        //#region GET: api/Product/GetAllPaging?
 
-        [HttpGet("GetAllPaging")]
-        public IActionResult GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
-        {
-            if (categoryId<=0)
-            {
-                categoryId = 1;
-            }
-            var products = _productService.GetAllPaging(categoryId, keyword, page, pageSize);
-            return new OkObjectResult(products);
-        }
+        //[HttpGet("GetAllPaging")]
+        //public IActionResult GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
+        //{
+        //    if (categoryId<=0)
+        //    {
+        //        categoryId = 1;
+        //    }
+        //    var products = _productService.GetAllPaging(categoryId, keyword, page, pageSize);
+        //    return new OkObjectResult(products);
+        //}
 
-        #endregion GET: api/Product/GetAllPaging?
+        //#endregion GET: api/Product/GetAllPaging?
 
         #region GET: api/Product/1
 
@@ -95,7 +95,7 @@ namespace NUShop.WebAPI.Controllers
                 return new BadRequestObjectResult(allErrors);
             }
 
-            productViewModel.SeoAlias = TextHelper.ToUnsignString(productViewModel.Name);
+            //productViewModel.SeoAlias = TextHelper.ToUnsignString(productViewModel.Name);
             if (productViewModel.Id == 0)
             {
                 _productService.Add(productViewModel);
