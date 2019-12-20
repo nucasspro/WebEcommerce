@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using NUShop.Service.Dapper.Interfaces;
 
-namespace NUShop.WebAPI.Controllers
+namespace NUShop.WebAPI.Controllers.ProductControllers
 {
     [Route("api/[controller]")]
     [ApiController]

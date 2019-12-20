@@ -13,7 +13,7 @@ using NUShop.Data.EF;
 using NUShop.Data.Entities;
 using NUShop.ViewModel.ViewModels;
 
-namespace NUShop.WebAPI.Controllers
+namespace NUShop.WebAPI.Controllers.ProductControllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -44,13 +44,13 @@ namespace NUShop.WebAPI.Controllers
             //var product = _context.Products.FromSql("select * from Products where name = '" + name + "'").FirstOrDefault();
             var product = new Product();
 
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand("select top(1) * from Products where name = '" + name + "'", connection);
+                    var command = new SqlCommand("select top(1) * from Products where name = '" + name + "'", connection);
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         product.Id = Convert.ToInt32(reader[0]);
@@ -79,11 +79,6 @@ namespace NUShop.WebAPI.Controllers
                 }
             }
 
-            if (product == null)
-            {
-                return NotFound();
-            }
-
             return _mapper.Map<ProductViewModel>(product);
         }
 
@@ -108,10 +103,8 @@ namespace NUShop.WebAPI.Controllers
                 {
                     return NotFound();
                 }
-                else
-                {
-                    throw;
-                }
+
+                throw;
             }
 
             return NoContent();

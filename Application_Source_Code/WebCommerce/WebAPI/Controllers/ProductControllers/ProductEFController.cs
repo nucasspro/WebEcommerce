@@ -5,7 +5,7 @@ using NUShop.Utilities.Helpers;
 using System.Linq;
 using NUShop.Service.EF.Interfaces;
 
-namespace NUShop.WebAPI.Controllers
+namespace NUShop.WebAPI.Controllers.ProductControllers
 {
     [Route("api/[controller]")]
     [ApiController]
