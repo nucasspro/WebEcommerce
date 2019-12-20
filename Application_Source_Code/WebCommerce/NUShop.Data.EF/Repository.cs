@@ -46,6 +46,7 @@ namespace NUShop.Data.EF
             return GetAll(includeProperties).AsNoTracking().SingleOrDefault(x => x.Id.Equals(id));
         }
 
+
         public T GetSingle(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
         {
             return GetAll(includeProperties).SingleOrDefault(predicate);

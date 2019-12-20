@@ -15,90 +15,90 @@ namespace NUShop.WebAPI.Controllers
     [ApiController]
     public class CategoryDapperController : ControllerBase
     {
-        #region Injections
+        //#region Injections
 
-        private readonly ICategoryDapperService _categoryService;
-        private readonly ILogger<CategoryDapperController> _logger;
+        //private readonly ICategoryDapperService _categoryService;
+        //private readonly ILogger<CategoryDapperController> _logger;
 
-        public CategoryDapperController(ICategoryDapperService categoryService, ILogger<CategoryDapperController> logger)
-        {
-            _categoryService = categoryService;
-            _logger = logger;
-        }
+        //public CategoryDapperController(ICategoryDapperService categoryService, ILogger<CategoryDapperController> logger)
+        //{
+        //    _categoryService = categoryService;
+        //    _logger = logger;
+        //}
 
-        #endregion Injections
+        //#endregion Injections
 
-        #region REST
+        //#region REST
 
-        #region GET: api/Category
+        //#region GET: api/Category
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var model = _categoryService.GetAll();
-            return new OkObjectResult(model);
-        }
+        //[HttpGet]
+        //public IActionResult GetAll()
+        //{
+        //    var model = _categoryService.GetAll();
+        //    return new OkObjectResult(model);
+        //}
 
-        #endregion GET: api/Category
+        //#endregion GET: api/Category
 
-        #region GET: api/Category/1
+        //#region GET: api/Category/1
 
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            var model = _categoryService.GetById(id);
+        //[HttpGet("{id}")]
+        //public IActionResult GetById(int id)
+        //{
+        //    var model = _categoryService.GetById(id);
 
-            return new ObjectResult(model);
-        }
+        //    return new ObjectResult(model);
+        //}
 
-        #endregion GET: api/Category/1
+        //#endregion GET: api/Category/1
 
-        #region POST: api/Category
+        //#region POST: api/Category
 
-        [HttpPost]
-        public IActionResult SaveEntity(CategoryViewModel categoryViewModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                var allErrors = ModelState.Values.SelectMany(v => v.Errors);
-                return new BadRequestObjectResult(allErrors);
-            }
+        //[HttpPost]
+        //public IActionResult SaveEntity(CategoryViewModel categoryViewModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+        //        return new BadRequestObjectResult(allErrors);
+        //    }
 
-            categoryViewModel.SeoAlias = TextHelper.ToUnsignString(categoryViewModel.Name);
-            if (categoryViewModel.Id == 0)
-            {
-                _categoryService.Add(categoryViewModel);
-            }
-            else
-            {
-                _categoryService.Update(categoryViewModel);
-            }
-            return new OkObjectResult(categoryViewModel);
-        }
+        //    categoryViewModel.SeoAlias = TextHelper.ToUnsignString(categoryViewModel.Name);
+        //    if (categoryViewModel.Id == 0)
+        //    {
+        //        _categoryService.Add(categoryViewModel);
+        //    }
+        //    else
+        //    {
+        //        _categoryService.Update(categoryViewModel);
+        //    }
+        //    return new OkObjectResult(categoryViewModel);
+        //}
 
-        #endregion POST: api/Category
+        //#endregion POST: api/Category
 
 
-        #region DELETE: api/Category/1
+        //#region DELETE: api/Category/1
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            if (id == 0)
-            {
-                return new BadRequestResult();
-            }
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return new BadRequestResult();
+        //    }
 
-            var isDeleted = _categoryService.Delete(id);
-            if (!isDeleted)
-            {
-                return new BadRequestObjectResult("Error!");
-            }
-            return new OkObjectResult(id);
-        }
+        //    var isDeleted = _categoryService.Delete(id);
+        //    if (!isDeleted)
+        //    {
+        //        return new BadRequestObjectResult("Error!");
+        //    }
+        //    return new OkObjectResult(id);
+        //}
 
-        #endregion DELETE: api/Category/1
+        //#endregion DELETE: api/Category/1
 
-        #endregion REST
+        //#endregion REST
     }
 }

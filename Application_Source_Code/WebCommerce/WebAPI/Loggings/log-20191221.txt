@@ -1,0 +1,139 @@
+2019-12-21T00:05:43.9871167+07:00 0HLS5DRCM259E:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductEF/GetAll   (ca22a1cb)
+2019-12-21T00:05:44.3417157+07:00 0HLS5DRCM259E:00000001 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)"' (500cc934)
+2019-12-21T00:05:44.4062897+07:00 0HLS5DRCM259E:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"ProductEF\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAll()" on controller "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-21T00:05:46.3130671+07:00 0HLS5DRCM259E:00000001 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-21T00:06:12.3376982+07:00 0HLS5DRCM259E:00000001 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-21T00:06:40.3423798+07:00 0HLS5DRCM259E:00000001 [INF] Executed DbCommand ("152"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM [Products] AS [p]" (0723d8ff)
+2019-12-21T00:07:41.6093488+07:00 0HLS5DRCM259E:00000001 [INF] Executed DbCommand ("135"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM [Products] AS [p]" (0723d8ff)
+2019-12-21T00:07:45.3430851+07:00 0HLS5DRCM259E:00000001 [INF] Executed action "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)" in 120733.1608ms (afa2e885)
+2019-12-21T00:07:45.6597091+07:00 0HLS5DRCM259E:00000001 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)"' (99874f2b)
+2019-12-21T00:07:45.8576991+07:00 0HLS5DRCM259E:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+EntityQueryable`1 -> List`1
+Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[NUShop.Data.Entities.Product, NUShop.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[NUShop.ViewModel.ViewModels.ProductViewModel, NUShop.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Product -> ProductViewModel
+NUShop.Data.Entities.Product -> NUShop.ViewModel.ViewModels.ProductViewModel
+
+Type Map configuration:
+Product -> ProductViewModel
+NUShop.Data.Entities.Product -> NUShop.ViewModel.ViewModels.ProductViewModel
+
+Destination Member:
+DateCreated
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(ReadOnlySpan`1 value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at NUShop.Utilities.Helpers.ConvertDatetime.UnixTimestampToDateTime(String unixTime) in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\NUShop.Utilities\Helpers\ConvertDatetime.cs:line 29
+   at lambda_method(Closure , EntityQueryable`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , EntityQueryable`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , EntityQueryable`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 211
+   at NUShop.Service.EF.Implements.ProductService.GetAll() in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\NUShop.Service\Implements\ProductService.cs:line 151
+   at NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll() in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\WebAPI\Controllers\ProductControllers\ProductEFController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-21T00:07:46.0952005+07:00 0HLS5DRCM259E:00000001 [INF] Request finished in 122033.3346ms 500 text/html; charset=utf-8 (791a596a)
+2019-12-21T00:09:12.3573605+07:00 0HLS5DTAKNKBM:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductEF/GetAll   (ca22a1cb)
+2019-12-21T00:09:12.7564392+07:00 0HLS5DTAKNKBM:00000001 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)"' (500cc934)
+2019-12-21T00:09:12.8888483+07:00 0HLS5DTAKNKBM:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"ProductEF\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAll()" on controller "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-21T00:09:15.1029430+07:00 0HLS5DTAKNKBM:00000001 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-21T00:09:20.4304043+07:00 0HLS5DTAKNKBM:00000001 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-21T00:09:20.8629427+07:00 0HLS5DTAKNKBM:00000001 [INF] Executed DbCommand ("107"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HotFlag], [p].[Image], [p].[Name], [p].[OriginalPrice], [p].[Price], [p].[PromotionPrice], [p].[SeoAlias], [p].[SeoDescription], [p].[SeoKeywords], [p].[SeoPageTitle], [p].[Status], [p].[Tags], [p].[Unit], [p].[ViewCount]
+FROM [Products] AS [p]" (0723d8ff)
+2019-12-21T00:18:54.0504506+07:00 0HLS5DTAKNKBM:00000001 [INF] Executed action "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)" in 581149.9331ms (afa2e885)
+2019-12-21T00:18:54.0990228+07:00 0HLS5DTAKNKBM:00000001 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll (NUShop.WebAPI)"' (99874f2b)
+2019-12-21T00:18:54.2038566+07:00 0HLS5DTAKNKBM:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[NUShop.Data.Entities.Product, NUShop.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[NUShop.ViewModel.ViewModels.ProductViewModel, NUShop.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Product -> ProductViewModel
+NUShop.Data.Entities.Product -> NUShop.ViewModel.ViewModels.ProductViewModel
+
+Type Map configuration:
+Product -> ProductViewModel
+NUShop.Data.Entities.Product -> NUShop.ViewModel.ViewModels.ProductViewModel
+
+Destination Member:
+DateCreated
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ParseDouble(ReadOnlySpan`1 value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at NUShop.Utilities.Helpers.ConvertDatetime.UnixTimestampToDateTime(String unixTime) in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\NUShop.Utilities\Helpers\ConvertDatetime.cs:line 29
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 211
+   at NUShop.Service.EF.Implements.ProductService.GetAll() in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\NUShop.Service\Implements\ProductService.cs:line 151
+   at NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetAll() in D:\HK9\AnToanBaoMatTrongTMDT\DoAn\SourceCode\WebEcommerce\Application_Source_Code\WebCommerce\WebAPI\Controllers\ProductControllers\ProductEFController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-21T00:18:54.4241946+07:00 0HLS5DTAKNKBM:00000001 [INF] Request finished in 581998.4781ms 500 text/html; charset=utf-8 (791a596a)
+2019-12-21T00:19:03.2799828+07:00 0HLS5DTAKNKBM:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5003/api/ProductEF/1   (ca22a1cb)
+2019-12-21T00:19:03.3290339+07:00 0HLS5DTAKNKBM:00000002 [INF] Executing endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetById (NUShop.WebAPI)"' (500cc934)
+2019-12-21T00:19:03.3643603+07:00 0HLS5DTAKNKBM:00000002 [INF] Route matched with "{action = \"GetById\", controller = \"ProductEF\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32)" on controller "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController" ("NUShop.WebAPI"). (122b2fdf)
+2019-12-21T00:19:03.4484016+07:00 0HLS5DTAKNKBM:00000002 [INF] Executing action method "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetById (NUShop.WebAPI)" - Validation state: Valid (dad538d7)
+2019-12-21T00:19:03.5030863+07:00 0HLS5DTAKNKBM:00000002 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-12-21T00:19:03.7194965+07:00 0HLS5DTAKNKBM:00000002 [INF] Executed DbCommand ("60"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], [x].[PromotionPrice], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[Status], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+WHERE [x].[Id] = @__id_0" (0723d8ff)
+2019-12-21T00:19:03.7502860+07:00 0HLS5DTAKNKBM:00000002 [INF] Executed action method "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetById (NUShop.WebAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 294.3562ms. (50a9e262)
+2019-12-21T00:19:03.7644753+07:00 0HLS5DTAKNKBM:00000002 [INF] Executing ObjectResult, writing value of type '"NUShop.ViewModel.ViewModels.ProductViewModel"'. (8a1b66c8)
+2019-12-21T00:19:03.8698742+07:00 0HLS5DTAKNKBM:00000002 [INF] Executed action "NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetById (NUShop.WebAPI)" in 502.5682ms (afa2e885)
+2019-12-21T00:19:03.8720405+07:00 0HLS5DTAKNKBM:00000002 [INF] Executed endpoint '"NUShop.WebAPI.Controllers.ProductControllers.ProductEFController.GetById (NUShop.WebAPI)"' (99874f2b)
+2019-12-21T00:19:03.8760460+07:00 0HLS5DTAKNKBM:00000002 [INF] Request finished in 612.96ms 200 application/json; charset=utf-8 (791a596a)

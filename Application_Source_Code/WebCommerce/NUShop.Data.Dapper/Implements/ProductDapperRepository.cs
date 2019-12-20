@@ -2,12 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using NUShop.Data.Dapper.Interfaces;
 using NUShop.Data.Entities;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 
 namespace NUShop.Data.Dapper.Implements
 {
@@ -28,7 +26,6 @@ namespace NUShop.Data.Dapper.Implements
             }
         }
 
-
         public IEnumerable<Product> GetAll()
         {
             using (IDbConnection conn = Connection)
@@ -46,7 +43,22 @@ namespace NUShop.Data.Dapper.Implements
             {
                 string query = "SELECT * FROM PRODUCTS WHERE Id = @ID";
                 conn.Open();
-                var result = conn.Query<Product>(query, new { ID = id});
+                var result = conn.Query<Product>(query, new { ID = id });
+                return result.FirstOrDefault();
+            }
+        }
+
+        public Product GetByName(string name)
+        {
+            using (IDbConnection conn = Connection)
+            {
+                string query = "sp_GetProductByName";
+                conn.Open();
+
+                var queryParameters = new DynamicParameters();
+                queryParameters.Add("@name", name);
+
+                var result = conn.Query<Product>(query, queryParameters, commandType: CommandType.StoredProcedure);
                 return result.FirstOrDefault();
             }
         }

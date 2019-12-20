@@ -62,6 +62,18 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
 
         #endregion GET: api/ProductDapper/1
 
+
+        [HttpGet("GetByName")]
+        public IActionResult GetByName(string name)
+        {
+            var product = _productService.GetByName(name);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return new OkObjectResult(product);
+        }
+
         //[HttpGet]
         //public IActionResult GetQuantities(int productId)
         //{

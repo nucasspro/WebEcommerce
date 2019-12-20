@@ -147,9 +147,16 @@ namespace NUShop.Service.EF.Implements
 
         public List<ProductViewModel> GetAll()
         {
-            var products = _productRepository.GetAll();
+            var products = _productRepository.GetAll().ToList();
             var productsViewModel = _mapper.Map<List<ProductViewModel>>(products);
             return productsViewModel;
+        }
+
+        public ProductViewModel GetByName(string name)
+        {
+            var product = _productRepository.GetSingle(x=>x.Name == name);
+            var productViewModel = _mapper.Map<ProductViewModel>(product);
+            return productViewModel;
         }
 
         public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int pageIndex, int pageSize)

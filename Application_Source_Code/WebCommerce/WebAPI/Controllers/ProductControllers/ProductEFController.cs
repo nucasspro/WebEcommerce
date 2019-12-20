@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using NUShop.ViewModel.ViewModels;
-using NUShop.Utilities.Helpers;
-using System.Linq;
 using NUShop.Service.EF.Interfaces;
+using NUShop.ViewModel.ViewModels;
+using System.Linq;
 
 namespace NUShop.WebAPI.Controllers.ProductControllers
 {
@@ -38,6 +37,17 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         }
 
         #endregion GET: api/Product
+
+        [HttpGet("GetByName")]
+        public IActionResult GetByName(string name)
+        {
+            var product = _productService.GetByName(name);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return new OkObjectResult(product);
+        }
 
         //#region GET: api/Product/GetAllPaging?
 

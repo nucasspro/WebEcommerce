@@ -11,6 +11,8 @@ namespace NUShop.Service.EF.Interfaces
     {
         List<ProductViewModel> GetAll();
 
+        ProductViewModel GetByName(string name);
+
         PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int pageIndex, int pageSize);
 
         ProductViewModel Add(ProductViewModel product);

@@ -9,5 +9,6 @@ namespace NUShop.Data.Dapper.Interfaces
     {
         IEnumerable<Product> GetAll();
         Product GetById(int id);
+        Product GetByName(string name);
     }
 }

@@ -60,5 +60,12 @@ namespace NUShop.Service.Dapper.Implements
             var productViewModel = _mapper.Map<ProductViewModel>(product);
             return productViewModel;
         }
+
+        public ProductViewModel GetByName(string name)
+        {
+            var product = _productRepository.GetByName(name);
+            var productViewModel = _mapper.Map<ProductViewModel>(product);
+            return productViewModel;
+        }
     }
 }

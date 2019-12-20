@@ -1,3 +1,27 @@
+-- Create store procedure to get product by name
+ALTER PROCEDURE sp_GetProductByName
+    @name AS VARCHAR(MAX)
+AS
+BEGIN
+	IF EXISTS(SELECT TOP (1) * FROM dbo.Products WHERE Name = @name)
+	BEGIN
+		SELECT Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice,
+               Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit,
+               SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated,
+               DateModified, Status 
+		FROM dbo.Products 
+		WHERE Name = @name;	
+	END	
+	ELSE
+	BEGIN
+	    RETURN;
+	END
+
+END
+GO
+
+EXEC sp_GetProductByName 'product 1'
+
 -- Check Columns
 /*Wrong */ 
 SELECT TOP(1) Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice, Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit, SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated, DateModified, Status

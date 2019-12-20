@@ -21,6 +21,8 @@ namespace NUShop.Service.Dapper.Interfaces
 
         ProductViewModel GetById(int id);
 
+        ProductViewModel GetByName(string name);
+
         //void AddQuantity(int productId, List<ProductQuantityViewModel> quantities);
 
         //List<ProductQuantityViewModel> GetQuantities(int productId);
