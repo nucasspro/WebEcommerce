@@ -28,12 +28,12 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
             _configuration = configuration;
         }
 
-        // GET: api/ProductsSqlRaw
-        [HttpGet("GetAll")]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
-        {
-            return await _context.Products.ToListAsync();
-        }
+        //// GET: api/ProductsSqlRaw
+        //[HttpGet("GetAll")]
+        //public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        //{
+        //    return await _context.Products.ToListAsync();
+        //}
 
         // GET: api/ProductsSqlRaw/5
         [HttpGet("GetByName")]
@@ -150,9 +150,9 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return product;
         //}
 
-        private bool ProductExists(int id)
-        {
-            return _context.Products.Any(e => e.Id == id);
-        }
+        //private bool ProductExists(int id)
+        //{
+        //    return _context.Products.Any(e => e.Id == id);
+        //}
     }
 }

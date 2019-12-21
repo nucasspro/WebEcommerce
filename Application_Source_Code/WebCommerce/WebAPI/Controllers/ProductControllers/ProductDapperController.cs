@@ -25,16 +25,16 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
 
         #region REST
 
-        #region GET: api/ProductDapper
+        //#region GET: api/ProductDapper
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var products = _productService.GetAll();
-            return new OkObjectResult(products);
-        }
+        //[HttpGet]
+        //public IActionResult GetAll()
+        //{
+        //    var products = _productService.GetAll();
+        //    return new OkObjectResult(products);
+        //}
 
-        #endregion GET: api/ProductDapper
+        //#endregion GET: api/ProductDapper
 
         //#region GET: api/ProductDapper/GetAllPaging?
 
@@ -137,7 +137,7 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return new OkObjectResult(wholePrices);
         //}
 
-        #region DELETE: api/ProductDapper/1
+        //#region DELETE: api/ProductDapper/1
 
         //[HttpDelete]
         //public IActionResult Delete(int id)
@@ -152,7 +152,7 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return new OkObjectResult(id);
         //}
 
-        #endregion DELETE: api/ProductDapper/1
+        //#endregion DELETE: api/ProductDapper/1
 
         #endregion REST
     }

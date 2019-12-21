@@ -27,16 +27,16 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
 
         #region REST
 
-        #region GET: api/Product
+        //#region GET: api/Product
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
-        {
-            var products = _productService.GetAll();
-            return new OkObjectResult(products);
-        }
+        //[HttpGet("GetAll")]
+        //public IActionResult GetAll()
+        //{
+        //    var products = _productService.GetAll();
+        //    return new OkObjectResult(products);
+        //}
 
-        #endregion GET: api/Product
+        //#endregion GET: api/Product
 
         [HttpGet("GetByName")]
         public IActionResult GetByName(string name)
@@ -96,26 +96,26 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return new OkObjectResult(wholePrices);
         //}
 
-        [HttpPost]
-        public IActionResult SaveEntity(ProductViewModel productViewModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                var allErrors = ModelState.Values.SelectMany(v => v.Errors);
-                return new BadRequestObjectResult(allErrors);
-            }
+        //[HttpPost]
+        //public IActionResult SaveEntity(ProductViewModel productViewModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+        //        return new BadRequestObjectResult(allErrors);
+        //    }
 
-            //productViewModel.SeoAlias = TextHelper.ToUnsignString(productViewModel.Name);
-            if (productViewModel.Id == 0)
-            {
-                _productService.Add(productViewModel);
-            }
-            else
-            {
-                _productService.Update(productViewModel);
-            }
-            return new OkObjectResult(productViewModel);
-        }
+        //    //productViewModel.SeoAlias = TextHelper.ToUnsignString(productViewModel.Name);
+        //    if (productViewModel.Id == 0)
+        //    {
+        //        _productService.Add(productViewModel);
+        //    }
+        //    else
+        //    {
+        //        _productService.Update(productViewModel);
+        //    }
+        //    return new OkObjectResult(productViewModel);
+        //}
 
         //[HttpPost]
         //public IActionResult SaveQuantities(int productId, List<ProductQuantityViewModel> quantities)
@@ -138,7 +138,7 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return new OkObjectResult(wholePrices);
         //}
 
-        #region DELETE: api/Product/1
+        //#region DELETE: api/Product/1
 
         //[HttpDelete]
         //public IActionResult Delete(int id)
@@ -153,7 +153,7 @@ namespace NUShop.WebAPI.Controllers.ProductControllers
         //    return new OkObjectResult(id);
         //}
 
-        #endregion DELETE: api/Product/1
+        //#endregion DELETE: api/Product/1
 
         #endregion REST
     }

